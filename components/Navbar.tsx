@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { scrollTo } from '@/lib/scrollTo';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,9 +16,15 @@ export default function Navbar() {
     { name: 'FAQ', href: '#faq', id: 'faq' },
   ];
 
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    scrollTo(id);
+    setIsOpen(false);
+  };
+
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + 100; // Offset for navbar height
+      const scrollPosition = window.scrollY + 150; // Offset for navbar height
 
       for (const link of navLinks) {
         const element = document.getElementById(link.id);
@@ -52,6 +59,7 @@ export default function Navbar() {
             <Link 
               key={link.name} 
               href={link.href} 
+              onClick={(e) => handleLinkClick(e, link.id)}
               className={`relative text-sm font-medium transition-colors py-1 group ${
                 activeSection === link.id ? 'text-primary' : 'text-slate-600 hover:text-primary'
               }`}
@@ -64,10 +72,11 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 lg:ml-8">
           <Link 
             href="#agendar" 
-            className="hidden sm:flex h-10 px-6 items-center justify-center rounded-[12px] bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 hover:scale-[1.02] active:scale-95 transition-all"
+            onClick={(e) => handleLinkClick(e, 'agendar')}
+            className="hidden sm:flex min-h-[2.5rem] h-auto py-2 px-6 items-center justify-center text-center rounded-[12px] bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 hover:scale-[1.02] active:scale-95 transition-all"
           >
             Agendar Sesión
           </Link>
@@ -89,18 +98,18 @@ export default function Navbar() {
             <Link 
               key={link.name} 
               href={link.href} 
+              onClick={(e) => handleLinkClick(e, link.id)}
               className={`text-sm font-medium py-2 transition-colors ${
                 activeSection === link.id ? 'text-primary font-bold' : 'text-slate-600 hover:text-primary'
               }`}
-              onClick={() => setIsOpen(false)}
             >
               {link.name}
             </Link>
           ))}
           <Link 
             href="#agendar" 
+            onClick={(e) => handleLinkClick(e, 'agendar')}
             className="flex h-12 px-6 items-center justify-center rounded-full bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20"
-            onClick={() => setIsOpen(false)}
           >
             Agendar Sesión
           </Link>

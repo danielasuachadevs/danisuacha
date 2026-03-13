@@ -1,4 +1,9 @@
 @import "tailwindcss";
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
 
 :root {
   --primary: #6B8E66; /* Sage Green */

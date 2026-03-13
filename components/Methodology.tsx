@@ -1,4 +1,6 @@
+"use client";
 import Link from 'next/link';
+import { scrollTo } from '@/lib/scrollTo';
 
 export default function Methodology() {
   const steps = [
@@ -34,7 +36,7 @@ export default function Methodology() {
   ];
 
   return (
-    <section className="py-20 px-6 lg:px-20 bg-white overflow-hidden" id="servicios">
+    <section className="py-20 px-6 lg:px-20 bg-white overflow-hidden scroll-mt-32" id="servicios">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           <div className="lg:w-1/3">
@@ -45,6 +47,10 @@ export default function Methodology() {
             </p>
             <Link 
               href="#agendar" 
+              onClick={(e) => {
+                e.preventDefault();
+                scrollTo('agendar');
+              }}
               className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-bold rounded-[12px] hover:bg-primary/90 hover:scale-[1.02] active:scale-95 transition-all shadow-lg shadow-primary/20 group"
             >
               Ver disponibilidad 

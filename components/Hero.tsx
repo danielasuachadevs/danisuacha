@@ -1,5 +1,7 @@
+"use client";
 import Image from 'next/image';
 import Link from 'next/link';
+import { scrollTo } from '@/lib/scrollTo';
 
 export default function Hero() {
   return (
@@ -7,7 +9,7 @@ export default function Hero() {
       {/* Background decoration */}
       <div className="absolute inset-0 z-0 opacity-20 dark:opacity-10 pointer-events-none">
         <Image 
-          src="https://images.unsplash.com/photo-1490750967868-58cb75065ed2?q=80&w=2400&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=2400&auto=format&fit=crop"
         alt=""
           fill
           className="object-cover object-center"
@@ -30,6 +32,10 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
               <Link 
                 href="#agendar" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollTo('agendar');
+                }}
                 className="h-12 px-8 flex items-center justify-center rounded-[12px] bg-primary text-white text-base font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 hover:scale-[1.02] active:scale-95 transition-all"
               >
                 Agendar y confirmar sesión

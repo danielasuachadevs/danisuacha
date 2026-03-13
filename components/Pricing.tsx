@@ -1,8 +1,10 @@
+"use client";
 import Link from 'next/link';
+import { scrollTo } from '@/lib/scrollTo';
 
 export default function Pricing() {
   return (
-    <section className="py-24 px-6 lg:px-20 bg-white overflow-hidden" id="agendar">
+    <section className="py-24 px-6 lg:px-20 bg-white overflow-hidden" id="pricing">
       <div className="mx-auto max-w-5xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Highlighted Card */}
@@ -23,7 +25,7 @@ export default function Pricing() {
                 <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="currentColor" className="text-primary">
                   <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/>
                 </svg>
-                Formato: Online (Zoom)
+                Formato: Online (Google Meet)
               </li>
               <li className="flex items-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="currentColor" className="text-primary">
@@ -32,9 +34,16 @@ export default function Pricing() {
                 Grabación disponible
               </li>
             </ul>
-            <button className="w-full py-4 rounded-[12px] bg-primary text-white font-bold text-lg hover:bg-primary/90 hover:scale-[1.02] active:scale-95 shadow-lg shadow-primary/25 transition-all">
-              Reservar Sesión - $80 USD
-            </button>
+            <Link 
+              href="#agendar"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollTo('agendar');
+              }}
+              className="w-full py-4 rounded-[12px] bg-primary text-white font-bold text-lg hover:bg-primary/90 hover:scale-[1.02] active:scale-95 shadow-lg shadow-primary/25 transition-all flex items-center justify-center"
+            >
+              Reservar Sesión
+            </Link>
           </div>
 
           {/* Neutral Card */}

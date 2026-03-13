@@ -13,6 +13,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://danisuacha.com"),
   title: "Biodeprogramación Terapéutica | Daniela Suacha",
   description: "Descubre el origen emocional de tus síntomas físicos y bloqueos emocionales a través de la Biodeprogramación Terapéutica con Daniela Suacha. Transforma tu vida hoy.",
   keywords: ["biodeprogramación", "terapia emocional", "sanación emocional", "biodescodificación", "clínica terapéutica", "bienestar emocional", "Daniela Suacha"],

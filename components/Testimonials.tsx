@@ -23,7 +23,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-20 px-6 lg:px-20 bg-surface-light overflow-hidden" id="testimonios">
+    <section className="py-20 px-6 lg:px-20 bg-surface-light overflow-hidden scroll-mt-32" id="testimonios">
       <div className="mx-auto max-w-7xl">
         <h2 className="text-center font-serif text-3xl text-black mb-12">Historias de transformación</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

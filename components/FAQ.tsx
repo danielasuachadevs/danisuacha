@@ -4,7 +4,7 @@ export default function FAQ() {
   const faqs = [
     {
       q: "¿Cómo es una sesión online?",
-      a: "Nos conectamos a través de Zoom. Es igual de efectiva que una sesión presencial, ya que trabajamos con el diálogo y la introspección. Necesitas un lugar tranquilo y buena conexión a internet."
+      a: "Nos conectamos a través de Google Meet. Es igual de efectiva que una sesión presencial, ya que trabajamos con el diálogo y la introspección. Necesitas un lugar tranquilo y buena conexión a internet."
     },
     {
       q: "¿Cuántas sesiones necesito?",
@@ -21,7 +21,7 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="py-20 px-6 lg:px-20 bg-white overflow-hidden" id="faq">
+    <section className="py-20 px-6 lg:px-20 bg-white overflow-hidden scroll-mt-32" id="faq">
       <div className="mx-auto max-w-3xl">
         <h2 className="text-center font-serif text-3xl text-black mb-12">Preguntas Frecuentes</h2>
         <div className="space-y-4">

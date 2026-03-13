@@ -4,28 +4,28 @@ import Image from "next/image";
 import { InlineWidget } from "react-calendly";
 
 export default function Calendly() {
-  // Reemplazar con tu URL real de Calendly (ej: https://calendly.com/usuario/evento)
-  const calendlyUrl = "https://calendly.com/danisuacha"; 
+  // URL base proporcionada por el usuario
+  const calendlyUrl = "https://calendly.com/danielasuachadevs/30min"; 
 
   return (
-    <section className="py-20 px-6 lg:px-20 bg-surface-light overflow-hidden" id="agendar">
+    <section className="py-20 px-6 lg:px-20 bg-surface-light overflow-hidden scroll-mt-32" id="agendar">
       <div className="mx-auto max-w-6xl">
         <div className="text-center mb-12">
           <span className="text-primary font-bold tracking-widest text-xs uppercase mb-2 block">Reserva</span>
           <h2 className="font-serif text-3xl md:text-4xl text-black mb-4">Agenda tu espacio de transformación</h2>
           <p className="text-black/60 font-sans max-w-2xl mx-auto">
-            Selecciona el horario que mejor te funcione. Recibirás un correo de confirmación con los detalles del acceso a Zoom.
+            Selecciona el horario que mejor te funcione. Recibirás un correo de confirmación con los detalles del acceso a Google Meet.
           </p>
         </div>
         
         <div className="bg-white rounded-2xl shadow-xl shadow-primary/5 border border-slate-100 overflow-hidden">
           <div className="flex flex-col lg:flex-row min-h-[700px]">
-            {/* Left Info Panel - Context Restored */}
-            <div className="w-full lg:w-80 p-8 lg:p-10 bg-slate-50/50 border-b lg:border-b-0 lg:border-r border-slate-100">
+            {/* Left Info Panel - RESTAURADO a petición del usuario */}
+            <div className="w-full lg:w-80 p-8 lg:p-10 bg-slate-50/50 border-b lg:border-b-0 lg:border-r border-slate-300">
               <div className="mb-8">
                 <div className="relative w-16 h-16 rounded-2xl mb-6 border-2 border-white shadow-sm overflow-hidden">
                   <Image 
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1goUuoR-lbr7oyqJmqfOQWDi7jRYh__CHrEbhVijbx5lIEIysdJoH9a9urOUHnwsE0w65mYpbw-H5_-mDqoTT7Z4U7CXqCv9PAhF17mJZhRAYErabNivxeo3LmyFf-bCShRXt6ntRa2N0JobG2FbBLAIYgLzk0pJ9iT4txDjSAjuSk3IHJAI14GJFYq2niFBMYtf3j6QCfdf-WaRGQiXu9AlOxAr85jQP0wLxGbKfgfH43UxOKAQDPHCzDty3m9h4RN8_e47rKw"
+                      src="/multimedia/dani2.jpeg"
                     alt="Daniela Suacha"
                     fill
                     className="object-cover"
@@ -46,7 +46,7 @@ export default function Calendly() {
                   </div>
                   <div>
                     <p className="text-xs font-bold text-black/40 uppercase tracking-tighter">Duración</p>
-                    <p className="font-bold font-sans">60 minutos</p>
+                    <p className="font-bold font-sans">30-60 minutos</p>
                   </div>
                 </div>
                 
@@ -58,32 +58,26 @@ export default function Calendly() {
                   </div>
                   <div>
                     <p className="text-xs font-bold text-black/40 uppercase tracking-tighter">Ubicación</p>
-                    <p className="font-bold font-sans">Videollamada Zoom</p>
+                    <p className="font-bold font-sans">Videollamada Google Meet</p>
                   </div>
                 </div>
-              </div>
-
-              <div className="mt-10 p-4 rounded-xl bg-primary/5 border border-primary/10">
-                <p className="text-xs text-primary font-medium italic font-sans">
-                  "El síntoma es la solución biológica a un conflicto emocional no resuelto."
-                </p>
               </div>
             </div>
 
             {/* Right Panel - Interactive Widget */}
-            <div className="flex-1 min-h-[650px] lg:min-h-0">
+            <div className="flex-1 min-h-[700px] lg:min-h-0">
               <InlineWidget 
                 url={calendlyUrl}
                 styles={{
-                  height: '100%',
+                  height: '700px',
                   width: '100%',
                 }}
                 pageSettings={{
                   backgroundColor: 'ffffff',
                   hideEventTypeDetails: true,
                   hideLandingPageDetails: true,
-                  primaryColor: '557a55', // matching the green tone from the user's image
-                  textColor: '000000',
+                  primaryColor: '748e63',
+                  textColor: '1a1f2c',
                 }}
               />
             </div>
