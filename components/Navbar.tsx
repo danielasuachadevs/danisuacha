@@ -60,7 +60,7 @@ export default function Navbar() {
               key={link.name} 
               href={link.href} 
               onClick={(e) => handleLinkClick(e, link.id)}
-              className={`relative text-sm font-medium transition-colors py-1 group ${
+              className={`relative text-sm font-medium transition-all duration-300 py-1 group hover:scale-105 ${
                 activeSection === link.id ? 'text-primary' : 'text-slate-600 hover:text-primary'
               }`}
             >
@@ -76,12 +76,12 @@ export default function Navbar() {
           <Link 
             href="#agendar" 
             onClick={(e) => handleLinkClick(e, 'agendar')}
-            className="hidden sm:flex min-h-[2.5rem] h-auto py-2 px-6 items-center justify-center text-center rounded-[12px] bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 hover:scale-[1.02] active:scale-95 transition-all"
+            className="hidden sm:flex min-h-[2.5rem] h-auto py-2 px-6 items-center justify-center text-center rounded-[12px] bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 hover:scale-[1.05] active:scale-95 transition-all"
           >
             Agendar Sesión
           </Link>
           <button 
-            className="lg:hidden p-2 text-slate-600 dark:text-slate-300"
+            className="lg:hidden p-2 text-slate-600 dark:text-slate-300 hover:scale-110 transition-transform"
             onClick={() => setIsOpen(!isOpen)}
           >
             <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor">

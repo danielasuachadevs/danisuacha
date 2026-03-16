@@ -8,7 +8,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-primary py-16 px-6 lg:px-20 border-t border-white/10 overflow-hidden relative">
-      <div className="mx-auto max-w-7xl text-center">
+      <div className="mx-auto max-w-7xl text-center animate-fade-in-up" style={{ animationFillMode: 'forwards' }}>
         <div className="flex items-center justify-center gap-3 text-white mb-6 group">
           <div className="size-6 text-white group-hover:scale-110 transition-transform">
             <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor">

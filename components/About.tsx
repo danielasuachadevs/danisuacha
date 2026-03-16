@@ -8,10 +8,11 @@ export default function About() {
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col-reverse md:flex-row items-center gap-12 bg-white rounded-3xl p-8 md:p-12 shadow-2xl shadow-slate-200/60 dark:shadow-none group">
           <div className="flex-1 space-y-6">
-            <h2 className="font-serif text-3xl text-black">Hola, soy Daniela</h2>
-            <h3 className="text-primary font-medium uppercase tracking-wide text-sm font-sans">Terapeuta en Biodeprogramación</h3>
+            <h2 className="font-serif text-3xl text-black">Hola, soy Dani Suachá</h2> 
+            <h3 className="text-primary font-medium uppercase tracking-wide text-sm font-sans">Terapeuta en Biodesprogramación</h3>
             <p className="text-black leading-relaxed font-sans">
-              Mi misión es acompañarte a descifrar el lenguaje de tu cuerpo y tus emociones. Con más de 8 años de experiencia, he ayudado a cientos de personas a reencontrarse con su bienestar natural.
+              Biodesprogramadora bilingüe certificada por el Instituto de Biodesprogramación Fernando Sánchez y certificación en Habilidades Socioemocionales, avalada por la SEP, la Red CONOCER y validez internacional.
+He ayudado a muchas personas a identificar y entender su situación y/o padecimientos, y a su vez a reprogramar su vida conscientemente.
             </p>
             <p className="text-black leading-relaxed font-sans">
               Creo firmemente que la enfermedad y los conflictos no son errores, sino soluciones biológicas de supervivencia que, una vez comprendidas, dejan de ser necesarias.
