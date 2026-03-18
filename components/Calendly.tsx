@@ -5,7 +5,7 @@ import { InlineWidget } from "react-calendly";
 
 export default function Calendly() {
   // URL base proporcionada por el usuario
-  const calendlyUrl = "https://calendly.com/danielasuachadevs/30min"; 
+  const calendlyUrl = "https://calendly.com/dansuacha/biodesprogramacion"; 
 
   return (
     <section className="py-20 px-6 lg:px-20 bg-surface-light overflow-hidden scroll-mt-32" id="agendar">
@@ -36,7 +36,7 @@ export default function Calendly() {
           </div>
 
           <p className="text-black/60 font-sans max-w-2xl mx-auto">
-            Selecciona el horario que mejor te funcione. Recibirás un correo de confirmación con los detalles del acceso a Google Meet.
+            Selecciona el horario que mejor te funcione. Recibirás un correo de confirmación con los detalles del acceso a Zoom.
           </p>
         </div>
         

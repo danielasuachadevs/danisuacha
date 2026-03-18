@@ -25,7 +25,7 @@ export default function Pricing() {
                 <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="currentColor" className="text-primary">
                   <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/>
                 </svg>
-                Formato: Online (Google Meet)
+                Formato: Online (Zoom)
               </li>
             </ul>
             <Link 

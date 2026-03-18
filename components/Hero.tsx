@@ -6,30 +6,33 @@ import { scrollTo } from '@/lib/scrollTo';
 export default function Hero() {
   return (
     <section className="relative w-full pt-8 pb-16 lg:pt-12 lg:pb-24 px-6 lg:px-20 overflow-hidden" id="inicio">
-      {/* Background decoration */}
-      <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
-        <Image 
-          src="/multimedia/isotipo.png"
-          alt=""
-          fill
-          className="object-contain object-center opacity-20"
-          priority
-        />
-      </div>
-
       <div className="relative z-10 mx-auto max-w-7xl">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-          <div className="flex-1 flex flex-col gap-6 text-center lg:text-left animate-fade-in-up" style={{ animationFillMode: 'forwards' }}>
-            <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase w-fit mx-auto lg:mx-0 font-sans">
-              Sanación Emocional Profunda
-            </span>
-            <h1 className="font-serif text-4xl lg:text-6xl font-bold leading-tight text-gray-deep">
-              Libera emociones que están afectando tu vida <span className="italic text-primary font-serif">sin que te des cuenta</span>
-            </h1>
-            <p className="text-lg text-gray-deep max-w-xl mx-auto lg:mx-0 leading-relaxed font-sans font-light">
-              Descubre el origen emocional de tus síntomas y conflictos para transformarlos en bienestar, equilibrio y paz interior.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+          <div className="flex-1 flex flex-col gap-6 text-center lg:text-left animate-fade-in-up relative" style={{ animationFillMode: 'forwards' }}>
+            {/* Isotipo behind H1 */}
+            <div className="absolute -top-10 -left-10 w-64 h-64 md:w-[400px] md:h-[400px] z-0 opacity-20 pointer-events-none">
+              <Image 
+                src="/multimedia/isotipo.png"
+                alt=""
+                fill
+                className="object-contain object-left-top opacity-100"
+                priority
+              />
+            </div>
+
+            <div className="relative z-10 space-y-6 flex flex-col lg:items-start items-center">
+              <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase w-fit mx-auto lg:mx-0 font-sans">
+                Sanación Emocional Profunda
+              </span>
+              <h1 className="font-serif text-4xl lg:text-6xl font-bold leading-tight text-gray-deep">
+                Libera emociones que están afectando tu vida <span className="italic text-primary font-serif">sin que te des cuenta</span>
+              </h1>
+              <p className="text-lg text-gray-deep max-w-xl mx-auto lg:mx-0 leading-relaxed font-sans font-light">
+                Descubre el origen emocional de tus síntomas y conflictos para transformarlos en bienestar, equilibrio y paz interior.
+              </p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4 relative z-10">
               <Link 
                 href="#agendar" 
                 onClick={(e) => {
@@ -49,6 +52,7 @@ export default function Hero() {
               </Link>
             </div>
           </div>
+
           <div className="flex-1 w-full max-w-lg lg:max-w-none animate-fade-in-up" style={{ animationDelay: '300ms', animationFillMode: 'forwards' }}>
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
               <Image 
