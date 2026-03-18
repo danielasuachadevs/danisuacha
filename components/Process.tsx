@@ -13,7 +13,7 @@ export default function Process() {
     {
       num: "3",
       title: "Confirmación",
-      desc: "Recibirás un email automático con el enlace de Google Meet."
+      desc: "Recibirás un email automático con el enlace de Zoom."
     },
     {
       num: "4",

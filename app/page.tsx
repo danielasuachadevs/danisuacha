@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className="relative flex flex-col min-h-screen w-full">
       <Navbar />
-      <main className="flex-grow pt-24 lg:pt-32">
+      <main className="flex-grow pt-16 lg:pt-20">
         <Hero />
         <PainPoints />
         <Methodology />

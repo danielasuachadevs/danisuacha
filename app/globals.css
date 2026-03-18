@@ -6,30 +6,61 @@
 }
 
 :root {
-  --primary: #6B8E66; /* Sage Green */
-  --secondary: #D4C5A9; /* Faint Gold/Beige Accent */
-  --background-light: #FDFCF8; /* Warm White */
-  --background-dark: #1A1C18; /* Dark Greenish Black */
-  --surface-light: #F5F2EB; /* Soft Beige */
+  --primary: #5F7D76; /* Verde Profundo: R=95 G=125 B=118 */
+  --green-light: #C9D6D2; /* Verde Claro: R=201 G=214 B=210 */
+  --gray-deep: #4F5554; /* Gris Profundo: R=79 G=85 B=84 */
+  --green-sage: #7F9993; /* Verde Salvia: R=127 G=153 B=147 */
+  --beige-arena: #A69A8B; /* Beige Arena: R=166 G=154 B=139 */
+  
+  --background-light: #FFFFFF; 
+  --background-dark: #1A1C18;
+  --surface-light: #FFFFFF; 
   --surface-dark: #242822;
 }
 
 @theme inline {
   --color-primary: var(--primary);
-  --color-secondary: var(--secondary);
+  --color-green-light: var(--green-light);
+  --color-gray-deep: var(--gray-deep);
+  --color-green-sage: var(--green-sage);
+  --color-beige-arena: var(--beige-arena);
   --color-background-light: var(--background-light);
   --color-background-dark: var(--background-dark);
   --color-surface-light: var(--surface-light);
   --color-surface-dark: var(--surface-dark);
   
-  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+  --font-sans: var(--font-gotham-light), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-gotham-bold), ui-serif, Georgia, serif;
 }
 
 body {
   background-color: var(--background-light);
-  color: #0F172A; /* slate-900 */
-  font-family: var(--font-manrope);
+  color: var(--gray-deep);
+  font-family: var(--font-sans);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.hover-lift {
+  transition: transform 0.3s ease, shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
 }
 
 .dark body {

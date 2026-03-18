@@ -1,14 +1,22 @@
 import type { Metadata } from "next";
-import { Manrope, Playfair_Display } from "next/font/google";
+import { Montserrat } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const manrope = Manrope({
-  variable: "--font-manrope",
-  subsets: ["latin"],
+const gothamBold = localFont({
+  src: "../public/fonts/4.Tipografía/Bold/GothamBold.ttf",
+  variable: "--font-gotham-bold",
+  weight: "700",
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const gothamLight = localFont({
+  src: "../public/fonts/4.Tipografía/Light/GothamLight.ttf",
+  variable: "--font-gotham-light",
+  weight: "300",
+});
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
 });
 
@@ -73,7 +81,7 @@ export default function RootLayout({
   return (
     <html lang="es" className="scroll-smooth">
       <body
-        className={`${manrope.variable} ${playfair.variable} antialiased`}
+        className={`${gothamBold.variable} ${gothamLight.variable} ${montserrat.variable} antialiased`}
       >
         {children}
         <FloatingActions />
