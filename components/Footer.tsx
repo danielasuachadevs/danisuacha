@@ -1,30 +1,64 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
+import { scrollTo } from '@/lib/scrollTo';
 
 export default function Footer() {
   const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
 
   return (
-    <footer className="bg-primary py-16 px-6 lg:px-20 border-t border-white/10 overflow-hidden relative">
+    <footer className="bg-primary py-16 px-6 lg:px-20 border-t border-white/10 overflow-hidden relative font-sans">
       <div className="mx-auto max-w-7xl text-center animate-fade-in-up" style={{ animationFillMode: 'forwards' }}>
-        <div className="flex items-center justify-center gap-3 text-white mb-6 group">
-          <div className="size-6 text-white group-hover:scale-110 transition-transform">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor">
-              <path d="M480-80q-137 0-240.5-85T121-391q0-94 53.5-171.5T316-670q6-20 12-40.5t16-40.5q18-45 52-77t84-32q50 0 84 32t52 77q10 20 16 40.5t12 40.5q88 30 141.5 107.5T839-391q0 141-103.5 226T480-80Zm0-60q111 0 195.5-67.5T779-391q0-74-41-135t-109-88q-7 30-16 57.5t-21 54.5q-12 27-28.5 50.5T527-251q-10 12-22.5 18t-24.5 6q-12 0-24.5-6T433-251q-20-24-36.5-47.5T368-349q-12-27-21-54.5T331-461q-68 27-109 88t-41 135q0 116 84.5 183.5T480-140Zm0-171q18-24 33-47.5t27-48.5q12-25 20-51t13-52q-23-9-46.5-14.5T480-531q-23 0-46.5 5.5T387-511q5 26 13 52t20 51q12 25 27 48.5t33 47.5Zm0-289q18 0 35 4.5t33 12.5q-6-26-14-52.5T532-689q-12-32-34.5-51.5T480-760q-25 0-47.5 19.5T398-689q-10 27-18 53.5t-14 52.5q16-8 33-12.5t35-4.5Z"/>
-            </svg>
+        <div className="flex items-center justify-center mb-4 group h-16 relative">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[230px] h-[230px] group-hover:scale-105 transition-transform duration-500">
+            <Image 
+              src="/multimedia/logo.png" 
+              alt="Logo Daniela Suacha" 
+              fill 
+              className="object-contain brightness-0 invert"
+            />
           </div>
-          <span className="text-lg font-bold tracking-tight font-sans">Biodeprogramación Terapéutica</span>
         </div>
         <h3 className="font-serif text-2xl text-white mb-6">Comienza tu viaje de sanación hoy</h3>
         
         <nav className="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-10">
-          <Link href="#inicio" className="text-sm font-medium text-white/80 hover:text-white transition-colors">Inicio</Link>
-          <Link href="#servicios" className="text-sm font-medium text-white/80 hover:text-white transition-colors">Servicios</Link>
-          <Link href="#testimonios" className="text-sm font-medium text-white/80 hover:text-white transition-colors">Testimonios</Link>
-          <Link href="#sobre-mi" className="text-sm font-medium text-white/80 hover:text-white transition-colors">Sobre mí</Link>
-          <Link href="#faq" className="text-sm font-medium text-white/80 hover:text-white transition-colors">Preguntas</Link>
+          <Link 
+            href="#inicio" 
+            onClick={(e) => { e.preventDefault(); scrollTo('inicio'); }}
+            className="text-sm font-medium text-white/80 hover:text-white transition-colors"
+          >
+            Inicio
+          </Link>
+          <Link 
+            href="#servicios" 
+            onClick={(e) => { e.preventDefault(); scrollTo('servicios'); }}
+            className="text-sm font-medium text-white/80 hover:text-white transition-colors"
+          >
+            Servicios
+          </Link>
+          <Link 
+            href="#testimonios" 
+            onClick={(e) => { e.preventDefault(); scrollTo('testimonios'); }}
+            className="text-sm font-medium text-white/80 hover:text-white transition-colors"
+          >
+            Testimonios
+          </Link>
+          <Link 
+            href="#sobre-mi" 
+            onClick={(e) => { e.preventDefault(); scrollTo('sobre-mi'); }}
+            className="text-sm font-medium text-white/80 hover:text-white transition-colors"
+          >
+            Dani Suachá
+          </Link>
+          <Link 
+            href="#faq" 
+            onClick={(e) => { e.preventDefault(); scrollTo('faq'); }}
+            className="text-sm font-medium text-white/80 hover:text-white transition-colors"
+          >
+            Preguntas
+          </Link>
         </nav>
 
         <div className="flex justify-center gap-6 mb-12">
@@ -95,7 +129,7 @@ export default function Footer() {
               </section>
               <section>
                 <h3 className="font-bold text-slate-900 dark:text-white mb-2">5. Sus Derechos</h3>
-                <p>Usted tiene derecho a acceder, rectificar o eliminar sus datos personales en cualquier momento contactándonos a través de danisuacha@gmail.com.</p>
+                <p>Usted tiene derecho a acceder, rectificar o eliminar sus datos personales en cualquier momento contactándonos a través de dansuacha@gmail.com.</p>
               </section>
             </div>
             <div className="p-6 border-t border-slate-100 dark:border-slate-800 text-right">

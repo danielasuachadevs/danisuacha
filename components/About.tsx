@@ -1,7 +1,10 @@
 import Image from 'next/image';
 
 export default function About() {
-  const certifications = ["Certificada en NMG", "Master en PNL", "Hipnosis Ericksoniana"];
+  const certifications = [
+    "Instituto de Biodesprogramación Fernando Sánchez G-26",
+    "Certificación EC1158 'Implementación de Habilidades Socioemocionales y Metodolologías para Desarrollarlas'"
+  ];
 
   return (
     <section className="py-20 px-6 lg:px-20 bg-white overflow-hidden scroll-mt-32" id="sobre-mi">

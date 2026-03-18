@@ -7,12 +7,12 @@ export default function Hero() {
   return (
     <section className="relative w-full pt-8 pb-16 lg:pt-12 lg:pb-24 px-6 lg:px-20 overflow-hidden" id="inicio">
       {/* Background decoration */}
-      <div className="absolute inset-0 z-0 opacity-20 dark:opacity-10 pointer-events-none">
+      <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
         <Image 
-          src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=2400&auto=format&fit=crop"
-        alt=""
+          src="/multimedia/isotipo.png"
+          alt=""
           fill
-          className="object-cover object-center"
+          className="object-contain object-center opacity-20"
           priority
         />
       </div>
@@ -20,13 +20,13 @@ export default function Hero() {
       <div className="relative z-10 mx-auto max-w-7xl">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           <div className="flex-1 flex flex-col gap-6 text-center lg:text-left animate-fade-in-up" style={{ animationFillMode: 'forwards' }}>
-            <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase w-fit mx-auto lg:mx-0">
+            <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase w-fit mx-auto lg:mx-0 font-sans">
               Sanación Emocional Profunda
             </span>
-            <h1 className="font-serif text-4xl lg:text-6xl font-medium leading-tight text-black">
+            <h1 className="font-serif text-4xl lg:text-6xl font-bold leading-tight text-gray-deep">
               Libera emociones que están afectando tu vida <span className="italic text-primary font-serif">sin que te des cuenta</span>
             </h1>
-            <p className="text-lg text-black max-w-xl mx-auto lg:mx-0 leading-relaxed font-sans">
+            <p className="text-lg text-gray-deep max-w-xl mx-auto lg:mx-0 leading-relaxed font-sans font-light">
               Descubre el origen emocional de tus síntomas y conflictos para transformarlos en bienestar, equilibrio y paz interior.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
@@ -36,14 +36,14 @@ export default function Hero() {
                   e.preventDefault();
                   scrollTo('agendar');
                 }}
-                className="h-12 px-8 flex items-center justify-center rounded-[12px] bg-primary text-white text-base font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 hover:scale-[1.05] active:scale-95 transition-all"
+                className="h-12 px-8 flex items-center justify-center text-center rounded-[12px] bg-primary text-white text-base font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 hover:scale-[1.05] active:scale-95 transition-all font-sans"
               >
                 Agendar y confirmar sesión
               </Link>
               <Link 
                 href="https://wa.me/524777657492" 
                 target="_blank"
-                className="h-12 px-8 flex items-center justify-center rounded-[12px] bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 text-base font-medium hover:bg-slate-50 dark:hover:bg-slate-800 hover:scale-[1.05] active:scale-95 transition-all"
+                className="h-12 px-8 flex items-center justify-center text-center rounded-[12px] bg-white dark:bg-surface-dark border border-green-light dark:border-slate-700 text-gray-deep dark:text-slate-200 text-base font-medium hover:bg-primary hover:text-white hover:border-primary hover:scale-[1.05] active:scale-95 transition-all font-sans"
               >
                 Solicitar más información
               </Link>
@@ -58,7 +58,7 @@ export default function Hero() {
                 className="object-cover object-center transform hover:scale-105 transition-transform duration-700 ease-in-out"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/30 to-transparent p-8">
-                <p className="text-white font-medium italic font-serif">"El cuerpo grita lo que la boca calla."</p>
+                <p className="text-white font-bold italic font-serif">"El cuerpo grita lo que la boca calla."</p>
               </div>
             </div>
           </div>

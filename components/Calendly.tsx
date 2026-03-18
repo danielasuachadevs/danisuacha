@@ -47,7 +47,7 @@ export default function Calendly() {
               <div className="mb-8">
                 <div className="relative w-16 h-16 rounded-2xl mb-6 border-2 border-white shadow-sm overflow-hidden">
                   <Image 
-                      src="/multimedia/dani2.jpeg"
+                      src="/multimedia/dani.jpeg"
                     alt="Daniela Suacha"
                     fill
                     className="object-cover"

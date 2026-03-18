@@ -10,8 +10,8 @@ export default function Pricing() {
           {/* Highlighted Card */}
           <div className="relative bg-white p-8 md:p-10 rounded-2xl border-2 border-primary shadow-xl shadow-primary/10 flex flex-col items-center text-center overflow-hidden group">
             <div className="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 rounded-bl-lg">RECOMENDADO</div>
-            <h3 className="font-serif text-2xl text-black mb-4">Quiero agendar mi sesión ahora</h3>
-            <p className="text-black mb-8 font-sans">
+            <h3 className="font-serif text-2xl text-gray-deep mb-4">Quiero agendar mi sesión ahora</h3>
+            <p className="text-gray-deep mb-8 font-sans font-light">
               Si estás listo/a para iniciar tu proceso de sanación, asegura tu espacio en mi agenda ahora mismo.
             </p>
             <ul className="text-left w-full mb-8 space-y-3 text-sm text-black font-sans">
@@ -26,12 +26,6 @@ export default function Pricing() {
                   <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/>
                 </svg>
                 Formato: Online (Google Meet)
-              </li>
-              <li className="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="currentColor" className="text-primary">
-                  <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/>
-                </svg>
-                Grabación disponible
               </li>
             </ul>
             <Link 
@@ -49,8 +43,8 @@ export default function Pricing() {
           {/* Neutral Card */}
           <div className="bg-surface-light p-8 md:p-10 rounded-2xl border border-slate-200 flex flex-col items-center text-center justify-between group">
             <div>
-              <h3 className="font-serif text-2xl text-black mb-4">Tengo dudas o preguntas</h3>
-              <p className="text-black mb-8 font-sans">
+              <h3 className="font-serif text-2xl text-gray-deep mb-4">Tengo dudas o preguntas</h3>
+              <p className="text-gray-deep mb-8 font-sans font-light">
                 ¿No estás seguro si esto es para ti? Escríbeme y evaluemos juntos si la biodeprogramación puede ayudarte.
               </p>
             </div>
@@ -66,8 +60,8 @@ export default function Pricing() {
                 Contactar por WhatsApp
               </Link>
               <Link 
-                href="mailto:danisuacha@gmail.com" 
-                className="w-full py-3 rounded-[12px] bg-transparent text-black font-medium hover:text-primary hover:scale-[1.02] active:scale-95 transition-all text-sm block font-sans"
+                href="mailto:dansuacha@gmail.com" 
+                className="w-full py-3 rounded-[12px] bg-transparent text-gray-deep font-medium hover:text-primary hover:scale-[1.02] active:scale-95 transition-all text-sm block font-sans font-light"
               >
                 Enviar un correo electrónico
               </Link>
