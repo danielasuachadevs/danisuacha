@@ -21,15 +21,15 @@ export default function Calendly() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="flex flex-col gap-2">
-                <div className="h-1 w-12 bg-primary/20 mx-auto rounded-full mb-2"></div>
+                <div className="h-1 w-12 bg-green-sage/40 mx-auto rounded-full mb-2"></div>
                 <p className="text-black/70 font-sans text-sm leading-relaxed">Comprender el origen emocional de lo que estás viviendo</p>
               </div>
               <div className="flex flex-col gap-2">
-                <div className="h-1 w-12 bg-primary/20 mx-auto rounded-full mb-2"></div>
+                <div className="h-1 w-12 bg-green-sage/40 mx-auto rounded-full mb-2"></div>
                 <p className="text-black/70 font-sans text-sm leading-relaxed">Liberar programas inconscientes limitantes</p>
               </div>
               <div className="flex flex-col gap-2">
-                <div className="h-1 w-12 bg-primary/20 mx-auto rounded-full mb-2"></div>
+                <div className="h-1 w-12 bg-green-sage/40 mx-auto rounded-full mb-2"></div>
                 <p className="text-black/70 font-sans text-sm leading-relaxed">Reconectar con tu bienestar y tu potencial</p>
               </div>
             </div>
@@ -40,10 +40,10 @@ export default function Calendly() {
           </p>
         </div>
         
-        <div className="bg-white rounded-2xl shadow-xl shadow-primary/5 border border-slate-100 overflow-hidden animate-fade-in-up" style={{ animationDelay: '300ms', animationFillMode: 'forwards' }}>
+        <div className="bg-white rounded-2xl shadow-xl shadow-primary/5 border border-primary/10 overflow-hidden animate-fade-in-up" style={{ animationDelay: '300ms', animationFillMode: 'forwards' }}>
           <div className="flex flex-col lg:flex-row min-h-[700px]">
             {/* Left Info Panel - RESTAURADO a petición del usuario */}
-            <div className="w-full lg:w-80 p-8 lg:p-10 bg-slate-50/50 border-b lg:border-b-0 lg:border-r border-slate-300">
+            <div className="w-full lg:w-80 p-8 lg:p-10 bg-slate-50/50 border-b lg:border-b-0 lg:border-r border-primary/10">
               <div className="mb-8">
                 <div className="relative w-16 h-16 rounded-2xl mb-6 border-2 border-white shadow-sm overflow-hidden">
                   <Image 
@@ -98,7 +98,7 @@ export default function Calendly() {
                   backgroundColor: 'ffffff',
                   hideEventTypeDetails: true,
                   hideLandingPageDetails: true,
-                  primaryColor: '748e63',
+                  primaryColor: '5f7d76',
                   textColor: '1a1f2c',
                 }}
               />

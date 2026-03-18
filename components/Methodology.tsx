@@ -1,4 +1,5 @@
 "use client";
+import Image from 'next/image';
 import Link from 'next/link';
 import { scrollTo } from '@/lib/scrollTo';
 
@@ -73,19 +74,32 @@ export default function Methodology() {
         </div>
         
         {/* Info Block at the bottom */}
-        <div className="mt-20 p-8 md:p-12 rounded-3xl bg-surface-light border border-primary/10 shadow-sm max-w-4xl mx-auto text-center hover-lift animate-fade-in-up" style={{ animationDelay: '900ms', animationFillMode: 'forwards' }}>
-          <div className="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mx-auto mb-6">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor">
-              <path d="M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-60q142 0 241-99t99-241q0-142-99-241t-241-99q-142 0-241 99t-99 241q0 142 99 241t241 99Zm0-340Z"/>
-            </svg>
+        <div className="relative mt-20 max-w-4xl mx-auto">
+          {/* Isotipo background */}
+          <div className="absolute inset-0 z-0 opacity-100 pointer-events-none flex items-center justify-center">
+            <Image 
+              src="/multimedia/isotipo.png"
+              alt=""
+              width={600}
+              height={600}
+              className="object-contain opacity-100"
+            />
           </div>
-          <h3 className="font-serif text-2xl text-black mb-4">Un proceso de conciencia y transformación</h3>
-          <p className="text-slate-700 leading-relaxed font-sans mb-6 max-w-2xl mx-auto">
-            La biodesprogramación no sustituye tratamientos médicos ni psicológicos. Es un acompañamiento complementario que busca ampliar la conciencia sobre los conflictos emocionales que pueden estar influyendo en la vida de una persona.
-          </p>
-          <p className="text-primary font-medium italic font-serif text-lg">
-            "Al comprender la raíz de estos programas, muchas personas experimentan mayor claridad, alivio emocional y cambios profundos en su manera de vivir."
-          </p>
+          
+          <div className="relative z-10 p-8 md:p-12 rounded-3xl bg-surface-light/80 backdrop-blur-sm border border-primary/10 shadow-sm text-center hover-lift animate-fade-in-up" style={{ animationDelay: '900ms', animationFillMode: 'forwards' }}>
+            <div className="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mx-auto mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor">
+                <path d="M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-60q142 0 241-99t99-241q0-142-99-241t-241-99q-142 0-241 99t-99 241q0 142 99 241t241 99Zm0-340Z"/>
+              </svg>
+            </div>
+            <h3 className="font-serif text-2xl text-black mb-4">Un proceso de conciencia y transformación</h3>
+            <p className="text-slate-700 leading-relaxed font-sans mb-6 max-w-2xl mx-auto">
+              La biodesprogramación no sustituye tratamientos médicos ni psicológicos. Es un acompañamiento complementario que busca ampliar la conciencia sobre los conflictos emocionales que pueden estar influyendo en la vida de una persona.
+            </p>
+            <p className="text-primary font-medium italic font-serif text-lg">
+              "Al comprender la raíz de estos programas, muchas personas experimentan mayor claridad, alivio emocional y cambios profundos en su manera de vivir."
+            </p>
+          </div>
         </div>
       </div>
     </section>
