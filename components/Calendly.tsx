@@ -8,7 +8,7 @@ export default function Calendly() {
   const calendlyUrl = "https://calendly.com/dansuacha/biodesprogramacion"; 
 
   return (
-    <section className="py-20 px-6 lg:px-20 bg-surface-light overflow-hidden scroll-mt-32" id="agendar">
+    <section className="py-20 px-6 lg:px-20 bg-surface-light overflow-hidden scroll-mt-32" >
       <div className="mx-auto max-w-6xl">
         <div className="text-center mb-16 animate-fade-in-up" style={{ animationFillMode: 'forwards' }}>
           <span className="text-primary font-bold tracking-widest text-xs uppercase mb-2 block">Reserva</span>
@@ -40,7 +40,7 @@ export default function Calendly() {
           </p>
         </div>
         
-        <div className="bg-white rounded-2xl shadow-xl shadow-primary/5 border border-primary/10 overflow-hidden animate-fade-in-up" style={{ animationDelay: '300ms', animationFillMode: 'forwards' }}>
+        <div className="bg-white rounded-2xl shadow-xl shadow-primary/5 border border-primary/10 overflow-hidden animate-fade-in-up" style={{ animationDelay: '300ms', animationFillMode: 'forwards' }} id="agendar">
           <div className="flex flex-col lg:flex-row min-h-[700px]">
             {/* Left Info Panel - RESTAURADO a petición del usuario */}
             <div className="w-full lg:w-80 p-8 lg:p-10 bg-slate-50/50 border-b lg:border-b-0 lg:border-r border-primary/10">

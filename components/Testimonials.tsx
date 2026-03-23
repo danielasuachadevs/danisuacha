@@ -3,23 +3,24 @@ import Image from 'next/image';
 export default function Testimonials() {
   const testimonials = [
     {
-      text: "Llevaba años con ansiedad y dolores de espalda. En solo dos sesiones entendí de dónde venía esa carga y el dolor desapareció.",
-      author: "Mariana G.",
-      location: "Madrid, España",
-      img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDoyX6_Drl50zgThkNEAwXulrnk1hjGRBiIoyO5R_TF-lF4AtYzizpN6cB7zg3Co0I5395U4iAy_5_d1ObQiCUUxrDEO9ITcctYxNlBaODdZHjXnCKywpQJ3PxM2NWPBY3zEpXRlbtbsiWT3N0A2soRJM-eJTkKEZXt6A3pg14oE6p4-idQDCVI79YB_yGNcXZ9lGtzxLBX9rVulTmMGYjsO5iNWwVkw7qSJBtp1HWyAS-5J6-0yfRxHDZ-vR4vAS4iCQv6GXugww"
+      text: "Hola! Mi nombre es Ruth Torres. Estuve tomando sesiones de bio desprogramación con Daniela, lo cual me ayudó mucho a sacar de raíz eventos traumáticos también a entender qué mensaje me daban mis síntomas, pero lo más importante a tener una mejor salud emocional porque se hace uno consciente de conflictos, problemas, ansiedades, miedos que hacen que nuestra salud no esté al 100. Creo que todos deberíamos de tomar sesiones de biodesprogramación para estar emocionalmente físicamente más sanos.",
+      author: "Ruth Torres",
+      location: "Paciente",
+      img: "/multimedia/ruth.jpeg"
     },
     {
-      text: "Increíble la claridad que obtienes. Me ayudó a romper un patrón de relaciones tóxicas que repetía sin darme cuenta.",
-      author: "Carlos R.",
-      location: "CDMX, México",
-      img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCck62-sZOnVZwaa29kZJeMQ7fgGfzwVj9FR-E5OnBv5e2zsFzdxtJwVvbLaeIBmHwE3JA9xAw964cAiNeNuDvBiQBtrwRbRcbPPJ-DCom8JuKRJbdr0_xGoGDQoixm99c7ajsORefm3Y4p_5ge3d-lQvrpF34ftb5-phkwvNi2m-X11yt4wws1VsihE9PFmL7jxeKd8MNMvr2gr4t05erA9GE_fsPqdW3Ur4mKAr0ZQioacwL4fDZkLjXt31qy6y1gdxPhMSigkg"
+      text: "Mi experiencia con la biodesprogramación ha sido profundamente reveladora. Llegué buscando acompañar un tema de salud relacionado con tiroides de Hashimoto y encontré un espacio para comprender la conexión entre mis emociones, mis pensamientos y mi cuerpo. Ha sido una herramienta valiosa como complemento a mi tratamiento médico, ayudándome a gestionar puntos de vida del pasado que han estado inconscientes durante mucho tiempo y que, al hacerlos conscientes, puedo atenderlos y generar un impacto positivo en mi cuerpo. Gracias Dani Suacha.",
+      author: "Annel Ramos",
+      location: "Paciente",
+      img: "/multimedia/annel.jpeg"
     },
     {
-      text: "Un enfoque muy profesional y cálido. Me sentí escuchada y comprendida desde el primer momento.",
-      author: "Ana Sofia L.",
-      location: "Bogotá, Colombia",
-      img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCebFHr5QaTtrAXQ-00EvIpCgWAqivRk1xrJXbJkYslp6aiEcAjLOrD_7_oBpLNgiLsjsT1O08feyJSRFfASkfVZiWy3sEV65H_us0ZY7pfHCJcQb5tuFZV8PGurZyNmJvyfuIGXBTL5YGGI4haI0PhVm4_Vhfd4bErKU-AcrD_sQ5_hCKg9wTYQrMXkObGroCsiCRddmwg3_hUh3QgGnNkL1qUGarb70Z08LEMkaPUwwWMlGajTuij4ayBJyagENAGqxqT0dxz5g"
+      text: "¿Cómo ha sido tu experiencia con la biodesprogramacion? Es una forma que no podría explicar con exactitud, porque te abre mucho la mente te hace pensar más allá y revivir momentos que pude haber olvidado en algún punto de mi vida. Si me preguntan que si lo recomendaría diría que sí pero sobretodo para aquellas personas que no se cierran a ningún tipo de terapia para sanar, y gente que realmente buscan salir adelante. Yo busque ayuda para salvarme a mí porque me enfocqué mucho tiempo en salvar a más gente y yo me estaba haciendo a un lado cuando ahora sé que mi prioridad soy YO antes que cualquier persona, el haber encontrado ayuda en Dani fue de mucha ayuda he ido de la mano con ella a vivir y experimentar muchas cosas de las que no me creía capaz. \n\n ¿Cómo te ha hecho sentir? Si pudiera resumirlo en una sola palabras diría que en PAZ, sé que todo lo que pasa a mi alrededor tiene y tuvo un porqué, que hubieron cosas que me dolieron en su momento si obviamente como todo, pero apartir de la biodesprogramacion encontré mi tranquilidad y mi paz y seguiré luchando para que siga siendo así. Y meditar es una de las herramientas más poderosa que uno como ser puede experimentar y vivir para encontrar esa paz y tranquilidad.",
+      author: "Jenny Lango",
+      location: "Paciente",
+      img: "/multimedia/jenny.jpeg"
     }
+
   ];
 
   return (
