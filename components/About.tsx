@@ -15,7 +15,7 @@ export default function About() {
             <div className="absolute top-0 -left-10 w-64 h-64 md:w-80 md:h-80 opacity-100 z-0 pointer-events-none">
               <Image 
                 src="/multimedia/isotipo.png"
-                alt=""
+                alt="Isotipo Daniela Suacha - Biodeprogramación"
                 fill
                 className="object-contain object-left-top opacity-30"
                 priority

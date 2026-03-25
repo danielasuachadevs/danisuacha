@@ -5,15 +5,14 @@ import { scrollTo } from '@/lib/scrollTo';
 
 export default function Hero() {
   return (
-    <section className="relative w-full pt-8 pb-16 lg:pt-12 lg:pb-24 px-6 lg:px-20 overflow-hidden" id="inicio">
+    <section className="relative w-full pt-12 pb-16 lg:pb-24 px-6 lg:px-20 overflow-hidden" id="inicio">
       <div className="relative z-10 mx-auto max-w-7xl">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           <div className="flex-1 flex flex-col gap-6 text-center lg:text-left animate-fade-in-up relative" style={{ animationFillMode: 'forwards' }}>
-            {/* Isotipo behind H1 */}
             <div className="absolute -top-10 -left-10 w-64 h-64 md:w-[400px] md:h-[400px] z-0 opacity-20 pointer-events-none">
               <Image 
                 src="/multimedia/isotipo.png"
-                alt=""
+                alt="Isotipo Daniela Suacha - Biodeprogramación"
                 fill
                 className="object-contain object-left-top opacity-100"
                 priority

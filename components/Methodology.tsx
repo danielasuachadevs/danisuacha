@@ -79,7 +79,7 @@ export default function Methodology() {
           <div className="absolute inset-0 z-0 opacity-100 pointer-events-none flex items-center justify-center">
             <Image 
               src="/multimedia/isotipo.png"
-              alt=""
+              alt="Isotipo Daniela Suacha - Metodología de Biodeprogramación"
               width={600}
               height={600}
               className="object-contain opacity-100"
