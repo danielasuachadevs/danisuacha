@@ -1,5 +1,6 @@
 "use client";
 import Link from 'next/link';
+import Image from 'next/image';
 import { scrollTo } from '@/lib/scrollTo';
 
 export default function Pricing() {
@@ -14,18 +15,28 @@ export default function Pricing() {
             <p className="text-gray-deep mb-8 font-sans font-light">
               Si estás listo/a para iniciar tu proceso de sanación, asegura tu espacio en mi agenda ahora mismo.
             </p>
-            <ul className="text-left w-full mb-8 space-y-3 text-sm text-black font-sans">
-              <li className="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="currentColor" className="text-primary">
-                  <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/>
-                </svg>
-                Duración: 60 minutos
+            <ul className="text-left w-full mb-8 space-y-4 text-sm text-black font-sans">
+              <li className="flex items-center gap-3">
+                <div className="relative size-6 shrink-0 opacity-80">
+                  <Image 
+                    src="/multimedia/isotipo.png" 
+                    alt="" 
+                    fill 
+                    className="object-contain"
+                  />
+                </div>
+                <span>Duración: 60 minutos</span>
               </li>
-              <li className="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="currentColor" className="text-primary">
-                  <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/>
-                </svg>
-                Formato: Online (Zoom)
+              <li className="flex items-center gap-3">
+                <div className="relative size-6 shrink-0 opacity-80">
+                  <Image 
+                    src="/multimedia/isotipo.png" 
+                    alt="" 
+                    fill 
+                    className="object-contain"
+                  />
+                </div>
+                <span>Formato: Online (Zoom)</span>
               </li>
             </ul>
             <Link 

@@ -50,6 +50,12 @@ export default function Testimonials() {
       author: "Pancho Alvarado",
       location: "Paciente",
       img: ""
+    },
+    {
+      text: "La Biodesprogramación me ha ayudado a transformarme a nivel emocional y personal, así como encontrar el origen de algunas situaciones de mi vida que hoy me permiten observar y analizar mis pensamientos, creencias y patrones, desde una perspectiva mas consciente, lo que sin duda me ayudó a reconocer mis bloqueos y muchas de mis reacciones. Uno de los aspectos más valiosos ha sido comprender la conexión entre mis emociones y mi cuerpo, reconociendo cómo las vivencias y experiencias del pasado influyen en mi presente. Este proceso no solo me ha ayudado a liberar cargas emocionales, sino también a desarrollar una mayor empatía hacia mí misma. La biodesprogramación me ha brindado herramientas para tomar mejores decisiones y asumir la responsabilidad de mi propio proceso de cambio. Aunque no siempre ha sido fácil, cada paso ha representado una oportunidad de crecimiento y de aprendizaje. \n\n En general, puedo decir que este trabajo con la biodesprogramación me ha ayudado a eliminar \"enfermedades crónicas\" y mejorar mi salud notablemente, así como la forma, calidad y la percepción de mi vida.",
+      author: "Ely Ortega",
+      location: "Paciente",
+      img: "/multimedia/ely.jpeg"
     }
   ];
 

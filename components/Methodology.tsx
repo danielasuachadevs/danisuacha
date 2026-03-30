@@ -38,27 +38,40 @@ export default function Methodology() {
 
   return (
     <section className="py-20 px-6 lg:px-20 bg-white overflow-hidden scroll-mt-32" id="servicios">
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-7xl relative">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
-          <div className="lg:w-1/3 animate-fade-in-up" style={{ animationFillMode: 'forwards' }}>
-            <span className="text-primary font-bold tracking-widest text-xs uppercase mb-2 block">Metodología</span>
-            <h2 className="font-serif text-3xl md:text-4xl text-black mb-6">¿Qué es la Biodeprogramación?</h2>
-            <p className="text-black mb-8 leading-relaxed font-sans">
-              La biodesprogramación es un proceso de acompañamiento terapéutico que permite identificar y liberar los programas emocionales inconscientes que pueden influir en nuestra salud, nuestras relaciones y nuestras experiencias de vida. Libera tu mente, sana tu historia, transforma tu vida.
-            </p>
-            <Link 
-              href="#agendar" 
-              onClick={(e) => {
-                e.preventDefault();
-                scrollTo('agendar');
-              }}
-              className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-bold rounded-[12px] hover:bg-primary/90 hover:scale-[1.05] active:scale-95 transition-all shadow-lg shadow-primary/20 group"
-            >
-              Ver disponibilidad 
-              <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="currentColor" className="ml-2 group-hover:translate-x-1 transition-transform">
-                <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/>
-              </svg>
-            </Link>
+          <div className="lg:w-1/3 animate-fade-in-up relative" style={{ animationFillMode: 'forwards' }}>
+            {/* Background Isotipo - Specific to this column */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] z-0 opacity-[0.20] pointer-events-none">
+              <Image 
+                src="/multimedia/isotipo.png"
+                alt=""
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+
+            <div className="relative z-10">
+              <span className="text-primary font-bold tracking-widest text-xs uppercase mb-2 block">Metodología</span>
+              <h2 className="font-serif text-3xl md:text-4xl text-black mb-6">¿Qué es la Biodeprogramación?</h2>
+              <p className="text-black mb-8 leading-relaxed font-sans">
+                La biodesprogramación es un proceso de acompañamiento terapéutico que permite identificar y liberar los programas emocionales inconscientes que pueden influir en nuestra salud, nuestras relaciones y nuestras experiencias de vida. Libera tu mente, sana tu historia, transforma tu vida.
+              </p>
+              <Link 
+                href="#agendar" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollTo('agendar');
+                }}
+                className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-bold rounded-[12px] hover:bg-primary/90 hover:scale-[1.05] active:scale-95 transition-all shadow-lg shadow-primary/20 group"
+              >
+                Ver disponibilidad 
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="currentColor" className="ml-2 group-hover:translate-x-1 transition-transform">
+                  <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/>
+                </svg>
+              </Link>
+            </div>
           </div>
           <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-3 gap-8">
             {steps.map((step, index) => (
