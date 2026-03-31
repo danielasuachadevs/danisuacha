@@ -5,15 +5,14 @@ import { scrollTo } from '@/lib/scrollTo';
 
 export default function Hero() {
   return (
-    <section className="relative w-full pt-8 pb-16 lg:pt-12 lg:pb-24 px-6 lg:px-20 overflow-hidden" id="inicio">
+    <section className="relative w-full pt-12 pb-16 lg:pb-24 px-6 lg:px-20 overflow-hidden" id="inicio">
       <div className="relative z-10 mx-auto max-w-7xl">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           <div className="flex-1 flex flex-col gap-6 text-center lg:text-left animate-fade-in-up relative" style={{ animationFillMode: 'forwards' }}>
-            {/* Isotipo behind H1 */}
             <div className="absolute -top-10 -left-10 w-64 h-64 md:w-[400px] md:h-[400px] z-0 opacity-20 pointer-events-none">
               <Image 
                 src="/multimedia/isotipo.png"
-                alt=""
+                alt="Isotipo Daniela Suacha - Biodeprogramación"
                 fill
                 className="object-contain object-left-top opacity-100"
                 priority
@@ -25,10 +24,10 @@ export default function Hero() {
                 Sanación Emocional Profunda
               </span>
               <h1 className="font-serif text-4xl lg:text-6xl font-bold leading-tight text-gray-deep">
-                Libera emociones que están afectando tu vida <span className="italic text-primary font-serif">sin que te des cuenta</span>
+                Tu historia no <span className="text-primary"> determina tu destino</span>
               </h1>
               <p className="text-lg text-gray-deep max-w-xl mx-auto lg:mx-0 leading-relaxed font-sans font-light">
-                Descubre el origen emocional de tus síntomas y conflictos para transformarlos en bienestar, equilibrio y paz interior.
+                A veces el síntoma no es el problema, es el mensaje. Cuando haces consciente lo inconsciente, tu vida comienza a transformarse. <span className="font-bold text-primary italic">Reprograma tu vida conscientemente.</span>
               </p>
             </div>
             
@@ -39,14 +38,14 @@ export default function Hero() {
                   e.preventDefault();
                   scrollTo('agendar');
                 }}
-                className="h-12 px-8 flex items-center justify-center text-center rounded-[12px] bg-primary text-white text-base font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 hover:scale-[1.05] active:scale-95 transition-all font-sans"
+                className="px-[1.5rem] py-[1rem] flex items-center justify-center text-center rounded-[12px] bg-primary text-white text-base font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 hover:scale-[1.05] active:scale-95 transition-all font-sans"
               >
                 Agendar y confirmar sesión
               </Link>
               <Link 
                 href="https://wa.me/524777657492" 
                 target="_blank"
-                className="h-12 px-8 flex items-center justify-center text-center rounded-[12px] bg-white dark:bg-surface-dark border border-green-light dark:border-slate-700 text-gray-deep dark:text-slate-200 text-base font-medium hover:bg-primary hover:text-white hover:border-primary hover:scale-[1.05] active:scale-95 transition-all font-sans"
+                className="p-[1.5rem] flex items-center justify-center text-center rounded-[12px] bg-white dark:bg-surface-dark border border-green-light dark:border-slate-700 text-gray-deep dark:text-slate-200 text-base font-medium hover:bg-primary hover:text-white hover:border-primary hover:scale-[1.05] active:scale-95 transition-all font-sans"
               >
                 Solicitar más información
               </Link>
@@ -56,13 +55,27 @@ export default function Hero() {
           <div className="flex-1 w-full max-w-lg lg:max-w-none animate-fade-in-up" style={{ animationDelay: '300ms', animationFillMode: 'forwards' }}>
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
               <Image 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBivsWs4WO__qmfRYQcdlP6t95yeNuBRrlrEZiIRNVN-c-USKmtYSWm8UZtIaP_PHe_nBWiFaFJaI-2wS5H5NxJDcxkbcF_N0tRrB5e2KJ53zQtYrTWhOABIr0YBsMsndzKjNbxxKrupCgm2sX0Q7UAd7mbMnXLTuxFtLgiYhM5k1Q4JQ9weAtBOc8pZPZUSVTkDlxdiIutvTEEQ_ZNt75j2keVh3E0ODWolKKETVgyLMkbnWrHs9ednITw5jX_2o6Y0ukbYP5_ew"
+                src="/multimedia/hero-v2.png"
                 alt="Paz y bienestar emocional"
                 fill
                 className="object-cover object-center transform hover:scale-105 transition-transform duration-700 ease-in-out"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/30 to-transparent p-8">
-                <p className="text-white font-bold italic font-serif">"El cuerpo grita lo que la boca calla."</p>
+              {/* Overlay: Upper Left Text */}
+              <div className="absolute top-6 left-6 lg:top-8 lg:left-8 animate-fade-in" style={{ animationDelay: '600ms', animationFillMode: 'forwards' }}>
+                <p className="text-white font-serif text-base lg:text-xl tracking-[0.3em] uppercase leading-tight drop-shadow-md">
+                  Comprender <br /> es liberar
+                </p>
+                <div className="h-[1px] w-full bg-primary/80 mt-2 shadow-lg"></div>
+              </div>
+
+              {/* Overlay: Bottom Center Logo */}
+              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-56 h-20 lg:w-96 lg:h-32 animate-fade-in" style={{ animationDelay: '800ms', animationFillMode: 'forwards' }}>
+                <Image 
+                  src="/multimedia/logo.png"
+                  alt="Dani Suacha"
+                  fill
+                  className="object-contain drop-shadow-xl brightness-0 invert"
+                />
               </div>
             </div>
           </div>

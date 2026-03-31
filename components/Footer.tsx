@@ -10,7 +10,17 @@ export default function Footer() {
 
   return (
     <footer className="bg-primary py-16 px-6 lg:px-20 border-t border-white/10 overflow-hidden relative font-sans">
-      <div className="mx-auto max-w-7xl text-center animate-fade-in-up" style={{ animationFillMode: 'forwards' }}>
+      {/* Background Isotipo */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] z-0 opacity-[0.05] pointer-events-none">
+        <Image 
+          src="/multimedia/isotipo.png"
+          alt=""
+          fill
+          className="object-contain brightness-0 invert"
+        />
+      </div>
+
+      <div className="mx-auto max-w-7xl text-center animate-fade-in-up relative z-10" style={{ animationFillMode: 'forwards' }}>
         <div className="flex items-center justify-center mb-4 group h-16 relative">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[230px] h-[230px] group-hover:scale-105 transition-transform duration-500">
             <Image 
@@ -73,6 +83,12 @@ export default function Footer() {
           {/* Facebook */}
           <Link href="https://www.facebook.com/danisuacha" target="_blank" aria-label="Facebook" className="text-white/70 hover:text-white transition-colors hover:scale-110 transform">
             <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+          </Link>
+          {/* TikTok */}
+          <Link href="https://www.tiktok.com/@danisuacha?_r=1&_t=ZS-951snYT6sdU" target="_blank" aria-label="TikTok" className="text-white/70 hover:text-white transition-colors hover:scale-110 transform">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 1 1-2.896-2.896 2.854 2.854 0 0 1 .512.047v-3.504a7.443 7.443 0 0 0-3.408.831 7.42 7.42 0 1 0 10.37 7.027V7.5a8.166 8.166 0 0 0 3.737-.814V3.5a4.72 4.72 0 0 1-1.1 3.186z"/>
+            </svg>
           </Link>
         </div>
 

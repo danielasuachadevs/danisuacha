@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     siteName: "Biodeprogramación Terapéutica",
     images: [
       {
-        url: "/og-image.jpg", // This would need to be generated or provided
+        url: "/multimedia/portada_dani.png",
         width: 1200,
         height: 630,
         alt: "Biodeprogramación Terapéutica - Daniela Suacha",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Biodeprogramación Terapéutica - Daniela Suacha",
     description: "Libera tus bloqueos emocionales y sana desde la raíz.",
-    images: ["/og-image.jpg"],
+    images: ["/multimedia/portada_dani.png"],
   },
   robots: {
     index: true,
@@ -71,6 +71,44 @@ export const metadata: Metadata = {
   },
 };
 
+// JSON-LD Structured Data
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "Biodeprogramación Terapéutica | Daniela Suacha",
+  "image": "https://danisuacha.com/multimedia/logo.png",
+  "@id": "https://danisuacha.com",
+  "url": "https://danisuacha.com",
+  "telephone": "+524777657492",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "León",
+    "addressRegion": "Guanajuato",
+    "addressCountry": "MX"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 21.1219,
+    "longitude": -101.6823
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "09:00",
+    "closes": "20:00"
+  },
+  "sameAs": [
+    "https://www.facebook.com/danisuacha",
+    "https://www.instagram.com/danisuacha"
+  ]
+};
+
 import FloatingActions from "@/components/FloatingActions";
 
 export default function RootLayout({
@@ -80,6 +118,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="scroll-smooth">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${gothamBold.variable} ${gothamLight.variable} ${montserrat.variable} antialiased`}
       >
