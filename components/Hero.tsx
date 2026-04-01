@@ -27,7 +27,7 @@ export default function Hero() {
                 <span className="text-primary">Biodesprogramación</span>
               </h1>
               <p className="text-lg text-gray-deep max-w-xl mx-auto lg:mx-0 leading-relaxed font-sans font-light">
-               Tu historia no determnina tu destino. A veces el síntoma no es el problema, es el mensaje. Cuando haces consciente lo inconsciente, tu vida comienza a transformarse. <span className="font-bold text-primary italic">Reprograma tu vida conscientemente.</span>
+               Tu historia no determina tu destino. A veces el síntoma no es el problema, es el mensaje. Cuando haces consciente lo inconsciente, tu vida comienza a transformarse. <span className="font-bold text-primary italic">Reprograma tu vida conscientemente.</span>
               </p>
             </div>
             
