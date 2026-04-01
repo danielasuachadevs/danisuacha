@@ -26,7 +26,12 @@ export default function Testimonials() {
   }, []);
 
   const testimonials: Testimonial[] = [
-    // ... (Keep the same 4 testimonials)
+    {
+      text: "La sesión con Dani me ayudó a identificar y liberar una culpa profunda que venía de creencias arraigadas desde mi historia personal y familiar. Me dio una claridad que nunca había tenido.",
+      author: "Olga Celaya",
+      location: "Paciente",
+      img: "/multimedia/olga.jpeg"
+    },
     {
       text: "Hola! Mi nombre es Ruth Torres. Estuve tomando sesiones de bio desprogramación con Daniela, lo cual me ayudó mucho a sacar de raíz eventos traumáticos también a entender qué mensaje me daban mis síntomas, pero lo más importante a tener una mejor salud emocional porque se hace uno consciente de conflictos, problemas, ansiedades, miedos que hacen que nuestra salud no esté al 100. Creo que todos deberíamos de tomar sesiones de biodesprogramación para estar emocionalmente físicamente más sanos.",
       author: "Ruth Torres",

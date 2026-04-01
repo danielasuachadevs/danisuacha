@@ -43,14 +43,14 @@ export default function Navbar() {
   }, [navLinks]);
 
   return (
-    <header className="fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-7xl z-50 rounded-[12px] bg-white/90 backdrop-blur-md border border-green-light shadow-lg px-6 py-4 lg:px-20">
+    <header className="fixed top-4 left-1/2 -translate-x-1/2 w-[92%] sm:w-[calc(100%-2rem)] max-w-7xl z-50 rounded-[12px] bg-white/90 backdrop-blur-md border border-green-light shadow-lg px-4 md:px-6 py-4 lg:px-20">
       <div className="flex items-center justify-between mx-auto max-w-7xl">
-        <Link href="/" className="relative h-12 w-48 group">
+        <Link href="/" className="relative h-[45px] w-[200px] sm:h-[50px] sm:w-[230px] md:h-[58px] md:w-[260px]">
           <Image 
             src="/multimedia/logo.png" 
             alt="Logo Daniela Suacha" 
             fill 
-            className="object-cover group-hover:scale-110 transition-transform duration-500"
+            className="object-cover transition-transform duration-500"
             priority
           />
         </Link>
