@@ -1,21 +1,53 @@
 "use client";
 
 import Image from "next/image";
-import { InlineWidget } from "react-calendly";
+import dynamic from "next/dynamic";
+import { useState, useEffect, useRef } from "react";
+
+// Carga dinámica de InlineWidget para reducir el bundle inicial
+const InlineWidget = dynamic(() => import("react-calendly").then((mod) => mod.InlineWidget), {
+  ssr: false,
+  loading: () => (
+    <div className="flex items-center justify-center w-full h-[700px] bg-slate-50/50 rounded-2xl animate-pulse">
+      <p className="text-primary font-medium">Cargando calendario...</p>
+    </div>
+  ),
+});
 
 export default function Calendly() {
+  const [shouldLoad, setShouldLoad] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  
   // URL base proporcionada por el usuario
   const calendlyUrl = "https://calendly.com/dansuacha/biodesprogramacion"; 
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setShouldLoad(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px" } // Cargar un poco antes de que sea visible
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="py-20 px-6 lg:px-20 bg-surface-light overflow-hidden scroll-mt-32" >
+    <section className="py-20 px-6 lg:px-20 bg-surface-light overflow-hidden scroll-mt-32" ref={sectionRef}>
       <div className="mx-auto max-w-6xl">
         <div className="text-center mb-16 animate-fade-in-up" style={{ animationFillMode: 'forwards' }}>
           <span className="text-primary font-bold tracking-widest text-xs uppercase mb-2 block">Reserva</span>
-          <h2 className="font-serif text-3xl md:text-5xl text-black mb-8">Agenda tu espacio de transformación</h2>
+          <h2 className="font-serif text-3xl md:text-5xl text-gray-deep mb-8">Agenda tu espacio de transformación</h2>
           
           <div className="max-w-4xl mx-auto bg-white/50 p-8 rounded-3xl border border-primary/10 shadow-sm mb-10 hover-lift">
-            <h3 className="text-2xl font-serif text-primary mb-4">Sesiones de Biodesprogramación</h3>
+            <h3 className="text-2xl font-serif text-gray-deep mb-4">Sesiones de Biodesprogramación</h3>
             <p className="text-lg text-black/80 font-serif italic mb-8">
               Un espacio seguro y profesional donde podrás:
             </p>
@@ -42,20 +74,21 @@ export default function Calendly() {
         
         <div className="bg-white rounded-2xl shadow-xl shadow-primary/5 border border-primary/10 overflow-hidden animate-fade-in-up" style={{ animationDelay: '300ms', animationFillMode: 'forwards' }} id="agendar">
           <div className="flex flex-col lg:flex-row min-h-[700px]">
-            {/* Left Info Panel - RESTAURADO a petición del usuario */}
+            {/* Left Info Panel */}
             <div className="w-full lg:w-80 p-8 lg:p-10 bg-slate-50/50 border-b lg:border-b-0 lg:border-r border-primary/10">
               <div className="mb-8">
                 <div className="relative w-16 h-16 rounded-full mb-6 border-2 border-white shadow-sm overflow-hidden">
                   <Image 
-                      src="/multimedia/dani.jpeg"
+                    src="/multimedia/dani.jpeg"
                     alt="Daniela Suacha"
                     fill
+                    sizes="64px"
                     className="object-cover"
                   />
                 </div>
-                <h3 className="text-2xl font-bold text-black font-serif mb-2">Sesión de Biodeprogramación</h3>
+                <h3 className="text-2xl font-bold text-gray-deep font-serif mb-2">Sesión de Biodeprogramación</h3>
                 <p className="text-sm text-black/60 font-sans leading-relaxed">
-                Las sesiones son un espacio de acompañamiento personalizado donde exploramos el origen emocional de los conflictos que deseas comprender o transformar.
+                  Las sesiones son un espacio de acompañamiento personalizado donde exploramos el origen emocional de los conflictos que deseas comprender o transformar.
                 </p>
               </div>
 
@@ -88,20 +121,22 @@ export default function Calendly() {
 
             {/* Right Panel - Interactive Widget */}
             <div className="flex-1 min-h-[700px] lg:min-h-0">
-              <InlineWidget 
-                url={calendlyUrl}
-                styles={{
-                  height: '700px',
-                  width: '100%',
-                }}
-                pageSettings={{
-                  backgroundColor: 'ffffff',
-                  hideEventTypeDetails: true,
-                  hideLandingPageDetails: true,
-                  primaryColor: '5f7d76',
-                  textColor: '1a1f2c',
-                }}
-              />
+              {shouldLoad && (
+                <InlineWidget 
+                  url={calendlyUrl}
+                  styles={{
+                    height: '700px',
+                    width: '100%',
+                  }}
+                  pageSettings={{
+                    backgroundColor: 'ffffff',
+                    hideEventTypeDetails: true,
+                    hideLandingPageDetails: true,
+                    primaryColor: '5f7d76',
+                    textColor: '1a1f2c',
+                  }}
+                />
+              )}
             </div>
           </div>
         </div>
@@ -111,8 +146,6 @@ export default function Calendly() {
             <p className="font-serif text-xl text-primary italic">"Cada proceso es único."</p>
             <p className="font-serif text-xl text-primary italic">"Cada historia merece ser comprendida."</p>
           </div>
-          
-       
         </div>
       </div>
     </section>

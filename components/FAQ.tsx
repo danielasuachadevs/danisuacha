@@ -109,7 +109,7 @@ export default function FAQ() {
   return (
     <section className="py-20 px-6 lg:px-20 bg-white overflow-hidden scroll-mt-32" id="faq">
       <div className="mx-auto max-w-3xl">
-        <h2 className="text-center font-serif text-3xl text-black mb-12">Preguntas Frecuentes</h2>
+        <h2 className="text-center font-serif text-3xl text-gray-deep mb-12">Preguntas Frecuentes</h2>
         <div className="space-y-4">
           {faqs.map((faq, i) => (
             <details 

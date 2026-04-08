@@ -14,6 +14,7 @@ export default function Hero() {
                 src="/multimedia/isotipo.png"
                 alt="Isotipo Daniela Suacha - Biodeprogramación"
                 fill
+                sizes="(max-width: 768px) 256px, 400px"
                 className="object-contain object-left-top opacity-100"
                 priority
               />
@@ -45,6 +46,7 @@ export default function Hero() {
               <Link 
                 href="https://wa.me/524777657492" 
                 target="_blank"
+                rel="noopener noreferrer"
                 className="px-4 py-3 sm:px-[1.5rem] sm:py-[1rem] flex items-center justify-center text-center rounded-[12px] bg-white dark:bg-surface-dark border border-green-light dark:border-slate-700 text-gray-deep dark:text-slate-200 text-sm sm:text-base font-medium hover:bg-primary hover:text-white hover:border-primary hover:scale-[1.05] active:scale-95 transition-all font-sans"
               >
                 Solicitar más información
@@ -58,6 +60,8 @@ export default function Hero() {
                 src="/multimedia/hero-v2.png"
                 alt="Paz y bienestar emocional"
                 fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-center transform hover:scale-105 transition-transform duration-700 ease-in-out"
               />
               {/* Overlay: Upper Left Text */}

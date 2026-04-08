@@ -23,8 +23,8 @@ export default function About() {
             </div>
             
             <div className="relative z-10 space-y-6">
-              <h2 className="font-serif text-3xl text-black">Hola, soy Dani Suachá</h2> 
-              <h3 className="text-primary font-medium uppercase tracking-wide text-sm font-sans">Terapeuta en Biodesprogramación</h3>
+              <h2 className="font-serif text-3xl text-gray-deep">Hola, soy Dani Suachá</h2> 
+              <h3 className="text-gray-deep font-medium uppercase tracking-wide text-sm font-sans">Terapeuta en Biodesprogramación</h3>
               <p className="text-black leading-relaxed font-sans">
                 Biodesprogramadora bilingüe certificada por el Instituto de Biodesprogramación Fernando Sánchez y certificación en Habilidades Socioemocionales, avalada por la SEP, la Red CONOCER y validez internacional.
   He ayudado a muchas personas a identificar y entender su situación y/o padecimientos, y a su vez a reprogramar su vida conscientemente.

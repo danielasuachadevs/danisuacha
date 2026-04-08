@@ -53,7 +53,7 @@ export default function PainPoints() {
     <section className="py-20 px-6 lg:px-20 bg-surface-light overflow-hidden">
       <div className="mx-auto max-w-7xl">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-3xl md:text-4xl text-black mb-4">¿Qué se puede trabajar con la biodesprogramación?</h2>
+          <h2 className="font-serif text-3xl md:text-4xl text-gray-deep mb-4">¿Qué se puede trabajar con la biodesprogramación?</h2>
           <p className="text-black max-w-2xl mx-auto font-sans">
             A veces el cuerpo y la mente nos envían señales claras de que algo necesita ser atendido.
           </p>
@@ -68,7 +68,7 @@ export default function PainPoints() {
               <div className="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
                 {card.icon}
               </div>
-              <h3 className="text-xl font-bold text-black mb-2 font-serif">{card.title}</h3>
+              <h3 className="text-xl font-bold text-gray-deep mb-2 font-serif">{card.title}</h3>
               <p className="text-black text-sm leading-relaxed font-sans">{card.description}</p>
             </div>
           ))}
@@ -76,7 +76,7 @@ export default function PainPoints() {
             className="group bg-white p-8 rounded-xl border border-primary/5 hover:border-primary/20 shadow-sm hover:shadow-md transition-all flex flex-col justify-center items-center text-center hover-lift animate-fade-in-up"
             style={{ animationDelay: `${cards.length * 150}ms`, animationFillMode: 'forwards' }}
           >
-            <h3 className="text-xl font-bold text-primary mb-2 font-serif">¿Te identificas?</h3>
+            <h3 className="text-xl font-bold text-gray-deep mb-2 font-serif">¿Te identificas?</h3>
             <p className="text-black text-sm mb-4 font-sans">No tienes que vivir con esto para siempre.</p>
             <Link 
               href="https://wa.me/524777657492" 
