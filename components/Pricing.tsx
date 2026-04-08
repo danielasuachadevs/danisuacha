@@ -17,7 +17,7 @@ export default function Pricing() {
             </p>
             <ul className="text-left w-full mb-8 space-y-4 text-sm text-black font-sans">
               <li className="flex items-center gap-3">
-                <div className="relative size-6 shrink-0 opacity-80">
+                <div className="relative size-6 shrink-0 opacity-80 rounded-full overflow-hidden">
                   <Image 
                     src="/multimedia/isotipo.png" 
                     alt="" 
@@ -28,7 +28,7 @@ export default function Pricing() {
                 <span>Duración: 60 minutos</span>
               </li>
               <li className="flex items-center gap-3">
-                <div className="relative size-6 shrink-0 opacity-80">
+                <div className="relative size-6 shrink-0 opacity-80 rounded-full overflow-hidden">
                   <Image 
                     src="/multimedia/isotipo.png" 
                     alt="" 

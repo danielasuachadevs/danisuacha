@@ -45,7 +45,7 @@ export default function Calendly() {
             {/* Left Info Panel - RESTAURADO a petición del usuario */}
             <div className="w-full lg:w-80 p-8 lg:p-10 bg-slate-50/50 border-b lg:border-b-0 lg:border-r border-primary/10">
               <div className="mb-8">
-                <div className="relative w-16 h-16 rounded-2xl mb-6 border-2 border-white shadow-sm overflow-hidden">
+                <div className="relative w-16 h-16 rounded-full mb-6 border-2 border-white shadow-sm overflow-hidden">
                   <Image 
                       src="/multimedia/dani.jpeg"
                     alt="Daniela Suacha"
@@ -61,7 +61,7 @@ export default function Calendly() {
 
               <div className="space-y-6">
                 <div className="flex items-center gap-4 text-black">
-                  <div className="size-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                  <div className="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor">
                       <path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 80q-83 0-156-31.5T197-517q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80ZM160-240v-80h640v80H160Z"/>
                     </svg>
@@ -73,7 +73,7 @@ export default function Calendly() {
                 </div>
 
                 <div className="flex items-center gap-4 text-black">
-                  <div className="size-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                  <div className="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor">
                       <path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-60q142 0 241-99t99-241q0-142-99-241t-241-99q-142 0-241 99t-99 241q0 142 99 241t241 99Zm0-340Zm-50 140h100v-200H430v200Zm0 100h100v-80H430v80Z"/>
                     </svg>

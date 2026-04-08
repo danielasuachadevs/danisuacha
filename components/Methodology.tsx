@@ -76,7 +76,7 @@ export default function Methodology() {
           <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-3 gap-8">
             {steps.map((step, index) => (
               <div key={index} className="flex flex-col gap-4 group animate-fade-in-up" style={{ animationDelay: `${400 + index * 150}ms`, animationFillMode: 'forwards' }}>
-                <div className="size-16 rounded-2xl bg-surface-light flex items-center justify-center text-primary shadow-sm group-hover:shadow-md group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                <div className="size-16 rounded-full bg-surface-light flex items-center justify-center text-primary shadow-sm group-hover:shadow-md group-hover:bg-primary group-hover:text-white transition-all duration-300">
                   {step.icon}
                 </div>
                 <h3 className="text-xl font-bold font-serif text-black">{step.title}</h3>
@@ -105,9 +105,9 @@ export default function Methodology() {
                 <path d="M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-60q142 0 241-99t99-241q0-142-99-241t-241-99q-142 0-241 99t-99 241q0 142 99 241t241 99Zm0-340Z"/>
               </svg>
             </div>
-            <h3 className="font-serif text-2xl text-black mb-4">Un proceso de conciencia y transformación</h3>
+            <h3 className="font-serif text-2xl text-black mb-4">Un proceso de consciencia y transformación</h3>
             <p className="text-slate-700 leading-relaxed font-sans mb-6 max-w-2xl mx-auto">
-              La biodesprogramación no sustituye tratamientos médicos ni psicológicos. Es un acompañamiento complementario que busca ampliar la conciencia sobre los conflictos emocionales que pueden estar influyendo en la vida de una persona.
+              La biodesprogramación no sustituye tratamientos médicos ni psicológicos. Es un acompañamiento complementario que busca ampliar la consciencia sobre los conflictos emocionales que pueden estar influyendo en la vida de una persona.
             </p>
             <p className="text-primary font-medium italic font-serif text-lg">
               "Al comprender la raíz de estos programas, muchas personas experimentan mayor claridad, alivio emocional y cambios profundos en su manera de vivir."

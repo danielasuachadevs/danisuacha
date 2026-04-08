@@ -4,7 +4,7 @@ export default function PainPoints() {
   const cards = [
     {
       title: "Salud física",
-      description: "Síntomas recurrentes, enfermedades crónicas, dolores persistentes, problemas digestivos, respiratorios o hormonales, cansancio o falta de energía.",
+      description: "Síntomas que regresan una y otra vez, dolores persistentes, problemas digestivos, respiratorios u hormonales, o un cansancio constante…pueden ser señales de que tu cuerpo está intentando decirte algo.Cuando comprendes el origen emocional de lo que estás viviendo, también puede empezar a mejorar cómo te sientes físicamente.",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor">
           <path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-60q142 0 241-99t99-241q0-142-99-241t-241-99q-142 0-241 99t-99 241q0 142 99 241t241 99Zm0-340Zm-50 140h100v-200H430v200Zm0 100h100v-80H430v80Z"/>
@@ -51,10 +51,9 @@ export default function PainPoints() {
 
   return (
     <section className="py-20 px-6 lg:px-20 bg-surface-light overflow-hidden">
-      <div className="mx-auto max-max-w-7xl">
+      <div className="mx-auto max-w-7xl">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-3xl md:text-4xl text-black mb-4">¿Qué se puede trabajar con
-la biodesprogramación?</h2>
+          <h2 className="font-serif text-3xl md:text-4xl text-black mb-4">¿Qué se puede trabajar con la biodesprogramación?</h2>
           <p className="text-black max-w-2xl mx-auto font-sans">
             A veces el cuerpo y la mente nos envían señales claras de que algo necesita ser atendido.
           </p>
@@ -69,7 +68,7 @@ la biodesprogramación?</h2>
               <div className="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
                 {card.icon}
               </div>
-              <h3 className="text-lg font-bold text-black mb-2 font-sans">{card.title}</h3>
+              <h3 className="text-xl font-bold text-black mb-2 font-serif">{card.title}</h3>
               <p className="text-black text-sm leading-relaxed font-sans">{card.description}</p>
             </div>
           ))}
@@ -77,7 +76,7 @@ la biodesprogramación?</h2>
             className="group bg-white p-8 rounded-xl border border-primary/5 hover:border-primary/20 shadow-sm hover:shadow-md transition-all flex flex-col justify-center items-center text-center hover-lift animate-fade-in-up"
             style={{ animationDelay: `${cards.length * 150}ms`, animationFillMode: 'forwards' }}
           >
-            <h3 className="text-lg font-bold text-primary mb-2 font-sans">¿Te identificas?</h3>
+            <h3 className="text-xl font-bold text-primary mb-2 font-serif">¿Te identificas?</h3>
             <p className="text-black text-sm mb-4 font-sans">No tienes que vivir con esto para siempre.</p>
             <Link 
               href="https://wa.me/524777657492" 

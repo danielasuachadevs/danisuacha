@@ -10,7 +10,7 @@ export default function FAQ() {
           <p>La biodesprogramación es un enfoque terapéutico que busca identificar el origen emocional de los conflictos que experimentamos en nuestra vida.</p>
           <p>Muchos síntomas físicos, emociones intensas o patrones repetitivos pueden estar relacionados con programas inconscientes que se formaron a partir de experiencias vividas o heredadas dentro del sistema familiar.</p>
           <p>El inconsciente registra cada experiencia emocional significativa. Cuando estas experiencias no se integran o resuelven, pueden manifestarse posteriormente a través de síntomas, bloqueos o situaciones repetitivas.</p>
-          <p>La biodesprogramación permite traer esa información a la conciencia para comprender su sentido, liberarla y crear nuevas formas de vivir la experiencia.</p>
+          <p>La biodesprogramación permite traer esa información a la consciencia para comprender su sentido, liberarla y crear nuevas formas de vivir la experiencia.</p>
           <p>No se trata únicamente de sanar un síntoma, sino de comprender el mensaje que el cuerpo o la vida están expresando.</p>
         </div>
       )
@@ -60,7 +60,7 @@ export default function FAQ() {
               { t: "1. Motivo de consulta", d: "Se define claramente el síntoma, emoción o situación que se desea trabajar." },
               { t: "2. Exploración emocional", d: "Se investigan eventos significativos, experiencias y emociones relacionadas con el conflicto." },
               { t: "3. Identificación del programa inconsciente", d: "Se detectan patrones emocionales o creencias que pueden estar influyendo en la situación actual." },
-              { t: "4. Toma de conciencia", d: "Comprender el origen del conflicto permite al inconsciente reorganizar la información emocional." },
+              { t: "4. Toma de consciencia", d: "Comprender el origen del conflicto permite al inconsciente reorganizar la información emocional." },
               { t: "5. Integración", d: "Se generan nuevas percepciones y recursos internos que permiten transformar la experiencia." }
             ].map((step, idx) => (
               <div key={idx} className="flex gap-3">
@@ -85,7 +85,7 @@ export default function FAQ() {
               { t: "1. Retomar Motivo de consulta", d: "Se redefine claramente el síntoma, emoción o situación que se desea trabajar." },
               { t: "2. Exploración emocional", d: "Se investigan eventos significativos, experiencias y emociones relacionadas con el conflicto. Y los movimientos internos sobre lo trabajado en la o las sesiones anteriores." },
               { t: "3. Identificación del programa inconsciente", d: "Se detectan patrones emocionales o creencias que pueden estar influyendo en la situación actual. Seguimiento a lo trabajado en la o las sesiones ateriores." },
-              { t: "4. Toma de conciencia", d: "Comprender el origen del conflicto permite al inconsciente reorganizar la información emocional." },
+              { t: "4. Toma de consciencia", d: "Comprender el origen del conflicto permite al inconsciente reorganizar la información emocional." },
               { t: "5. Integración", d: "Se generan nuevas percepciones y recursos internos que permiten transformar la experiencia." }
             ].map((step, idx) => (
               <div key={idx} className="flex gap-3">
@@ -102,7 +102,7 @@ export default function FAQ() {
     },
     {
       q: "¿tengo que dejar mi tratamiento médico?",
-      a: "Absolutamente no. La biodeprogramación es complementaria a la medicina. Nunca debes suspender medicación ni tratamientos sin la autorización de tu médico."
+      a: "Absolutamente NO. La biodeprogramación es complementaria a la medicina. Nunca debes suspender medicación ni tratamientos sin la autorización de tu médico."
     }
   ];
 
