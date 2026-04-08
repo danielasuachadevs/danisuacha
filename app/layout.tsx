@@ -7,17 +7,20 @@ const gothamBold = localFont({
   src: "../public/fonts/4.Tipografía/Bold/GothamBold.ttf",
   variable: "--font-gotham-bold",
   weight: "700",
+  display: "swap",
 });
 
 const gothamLight = localFont({
   src: "../public/fonts/4.Tipografía/Light/GothamLight.ttf",
   variable: "--font-gotham-light",
   weight: "300",
+  display: "swap",
 });
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {

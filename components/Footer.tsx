@@ -103,7 +103,7 @@ export default function Footer() {
             </button>
           </div>
           <p className="mt-4 pt-4 border-t border-white/10">
-            desarrollado por <Link href="https://blackcherrydevs.vercel.app/" target="_blank" className="font-bold text-white hover:underline">BlackCherry</Link>
+            desarrollado por <Link href="https://blackcherrydevs.vercel.app/" target="_blank" className="font-bold text-white hover:underline">BlackCherry IT Consulting</Link>
           </p>
         </div>
       </div>
@@ -116,7 +116,7 @@ export default function Footer() {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="p-6 border-b border-slate-100 dark:border-slate-800 flex justify-between items-center">
-              <h2 className="text-xl font-bold text-slate-900 dark:text-white font-serif">Política de Privacidad</h2>
+              <h2 className="text-xl font-bold text-gray-deep font-serif">Política de Privacidad</h2>
               <button 
                 onClick={() => setIsPrivacyOpen(false)}
                 className="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors text-slate-500"
@@ -128,23 +128,23 @@ export default function Footer() {
             </div>
             <div className="p-8 overflow-y-auto font-sans text-slate-700 dark:text-slate-300 leading-relaxed space-y-6">
               <section>
-                <h3 className="font-bold text-slate-900 dark:text-white mb-2">1. Recopilación de Información</h3>
+                <h3 className="font-bold text-gray-deep mb-2">1. Recopilación de Información</h3>
                 <p>Recopilamos información personal que usted nos proporciona voluntariamente al agendar una sesión, incluyendo su nombre, correo electrónico y número de teléfono.</p>
               </section>
               <section>
-                <h3 className="font-bold text-slate-900 dark:text-white mb-2">2. Uso de los Datos</h3>
+                <h3 className="font-bold text-gray-deep mb-2">2. Uso de los Datos</h3>
                 <p>Sus datos se utilizan exclusivamente para gestionar sus citas, enviarle confirmaciones y recordatorios, y proporcionar el servicio terapéutico solicitado.</p>
               </section>
               <section>
-                <h3 className="font-bold text-slate-900 dark:text-white mb-2">3. Confidencialidad</h3>
+                <h3 className="font-bold text-gray-deep mb-2">3. Confidencialidad</h3>
                 <p>Toda la información compartida durante las sesiones de Biodeprogramación es estrictamente confidencial, siguiendo los más altos estándares éticos de la práctica terapéutica.</p>
               </section>
               <section>
-                <h3 className="font-bold text-slate-900 dark:text-white mb-2">4. Seguridad</h3>
+                <h3 className="font-bold text-gray-deep mb-2">4. Seguridad</h3>
                 <p>Implementamos medidas de seguridad técnicas y organizativas para proteger sus datos personales contra el acceso no autorizado o la pérdida.</p>
               </section>
               <section>
-                <h3 className="font-bold text-slate-900 dark:text-white mb-2">5. Sus Derechos</h3>
+                <h3 className="font-bold text-gray-deep mb-2">5. Sus Derechos</h3>
                 <p>Usted tiene derecho a acceder, rectificar o eliminar sus datos personales en cualquier momento contactándonos a través de dansuacha@gmail.com.</p>
               </section>
             </div>

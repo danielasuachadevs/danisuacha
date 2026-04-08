@@ -26,7 +26,7 @@ export default function Process() {
     <section className="py-20 px-6 lg:px-20 bg-surface-light border-y border-primary/10 overflow-hidden">
       <div className="mx-auto max-w-7xl">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-3xl text-black mb-4">Tu camino hacia el bienestar</h2>
+          <h2 className="font-serif text-3xl text-gray-deep mb-4">Tu camino hacia el bienestar</h2>
           <p className="text-black font-sans">Cuatro pasos sencillos para comenzar tu transformación</p>
         </div>
         <div className="relative">
@@ -38,7 +38,7 @@ export default function Process() {
                 <div className="size-10 rounded-full bg-primary text-white flex items-center justify-center font-bold mb-4 group-hover:scale-110 transition-transform">
                   {step.num}
                 </div>
-                <h4 className="font-bold text-black mb-2 font-sans">{step.title}</h4>
+                <h4 className="font-bold text-gray-deep mb-2 font-sans">{step.title}</h4>
                 <p className="text-xs text-black font-sans">{step.desc}</p>
               </div>
             ))}

@@ -85,6 +85,7 @@ export default function Navbar() {
           <button 
             className="lg:hidden p-2 text-slate-600 dark:text-slate-300 hover:scale-110 transition-transform"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
           >
             <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor">
               <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>

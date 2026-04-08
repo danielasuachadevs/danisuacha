@@ -58,10 +58,22 @@ export default function Testimonials() {
     },
     {
       text: "La Biodesprogramación me ha ayudado a transformarme a nivel emocional y personal, así como encontrar el origen de algunas situaciones de mi vida que hoy me permiten observar y analizar mis pensamientos, creencias y patrones, desde una perspectiva mas consciente, lo que sin duda me ayudó a reconocer mis bloqueos y muchas de mis reacciones. Uno de los aspectos más valiosos ha sido comprender la conexión entre mis emociones y mi cuerpo, reconociendo cómo las vivencias y experiencias del pasado influyen en mi presente. Este proceso no solo me ha ayudado a liberar cargas emocionales, sino también a desarrollar una mayor empatía hacia mí misma. La biodesprogramación me ha brindado herramientas para tomar mejores decisiones y asumir la responsabilidad de mi propio proceso de cambio. Aunque no siempre ha sido fácil, cada paso ha representado una oportunidad de crecimiento y de aprendizaje. \n\n En general, puedo decir que este trabajo con la biodesprogramación me ha ayudado a eliminar \"enfermedades crónicas\" y mejorar mi salud notablemente, así como la forma, calidad y la percepción de mi vida.",
-      author: "Ely Ortega",
+      author: "Ely Ortiz",
       location: "Paciente",
       img: "/multimedia/ely.jpeg"
-    }
+    },
+    {
+      text: "Mi nombre es Oscar López y quiero dar mi testimonio sobre mis terapias de Biodesprogramación que he tomado con Dani Suacha. Yo llegué muy mal en la primera terapia y al paso de las semanas (3 o 4) ya me sentía mucho mejor, he ido superando poco a poco esas cosas que me tenían tan enfermo física y mentalmente. Han pasado 3 meses, y por las razones que llegué ya las superé!! Pero vamos por más! Gracias Dany!!",
+      author: "Oscar López",
+      location: "Paciente",
+      img: "/multimedia/oscar.jpeg"
+    },
+    {
+      text: "He tomado terapia de biodescodificación biológica aproximadamente 2 años, gracias a ella he logrado superar ansiedad y miedos, he podido identificar problemas desde su raíz, entendiendo que muchas de esas emociones no me corresponden a mí solamente, sino son sentimientos heredados de generaciones anteriores. He visto mejorar mi vida y mis relaciones, he podido ver los eventos pasados desde el amor primeramente hacía mí, y después hacía los demás. Me ha ayudado a abrir mi mente a nuevas perspectivas o tipos de vida, que antes eran inimaginables para mí y hoy son una realidad.",
+      author: "Ana Paulina Manrique",
+      location: "Paciente",
+      img: "/multimedia/ana.jpeg"
+    },
   ];
 
   const getInitials = (name: string) => {
@@ -118,7 +130,7 @@ export default function Testimonials() {
   return (
     <section className="py-20 px-6 lg:px-20 bg-surface-light overflow-hidden scroll-mt-32" id="testimonios">
       <div className="mx-auto max-w-7xl">
-        <h2 className="text-center font-serif text-3xl text-black mb-12">Historias de transformación</h2>
+        <h2 className="text-center font-serif text-3xl text-gray-deep mb-12">Historias de transformación</h2>
         
         <div className="relative group px-8 md:px-16">
           {/* Carousel Viewport */}
