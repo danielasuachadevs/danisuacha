@@ -183,7 +183,7 @@ export default function Testimonials() {
                         )}
                       </div>
                       <div>
-                        <p className="text-sm font-bold text-black font-sans">{t.author}</p>
+                        <p className="text-sm font-bold text-gray-deep font-sans">{t.author}</p>
                         <p className="text-xs text-black font-sans">{t.location}</p>
                       </div>
                     </div>
@@ -250,7 +250,7 @@ export default function Testimonials() {
                 )}
               </div>
               <div className="flex flex-col">
-                <h3 className="font-serif text-xl md:text-2xl text-white md:mb-1">{selectedTestimonial.author}</h3>
+                <h3 className="font-serif text-xl md:text-2xl text-gray-deep md:mb-1">{selectedTestimonial.author}</h3>
                 <p className="text-white/80 text-sm md:text-base font-medium">{selectedTestimonial.location}</p>
               </div>
             </div>

@@ -48,7 +48,7 @@ export default function Calendly() {
           
           <div className="max-w-4xl mx-auto bg-white/50 p-8 rounded-3xl border border-primary/10 shadow-sm mb-10 hover-lift">
             <h3 className="text-2xl font-serif text-gray-deep mb-4">Sesiones de Biodesprogramación</h3>
-            <p className="text-lg text-black/80 font-serif italic mb-8">
+            <p className="text-lg text-gray-deep font-serif italic mb-8">
               Un espacio seguro y profesional donde podrás:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -132,8 +132,8 @@ export default function Calendly() {
                     backgroundColor: 'ffffff',
                     hideEventTypeDetails: true,
                     hideLandingPageDetails: true,
-                    primaryColor: '5f7d76',
-                    textColor: '1a1f2c',
+                    primaryColor: '#5F7D76',
+                    textColor: '#4F5554',
                   }}
                 />
               )}

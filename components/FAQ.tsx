@@ -6,7 +6,7 @@ export default function FAQ() {
       q: "¿qué es la biodesprogramación?",
       a: (
         <div className="space-y-4">
-          <p className="font-bold text-primary">Comprender el origen para transformar tu vida</p>
+          <p className="font-bold text-gray-deep">Comprender el origen para transformar tu vida</p>
           <p>La biodesprogramación es un enfoque terapéutico que busca identificar el origen emocional de los conflictos que experimentamos en nuestra vida.</p>
           <p>Muchos síntomas físicos, emociones intensas o patrones repetitivos pueden estar relacionados con programas inconscientes que se formaron a partir de experiencias vividas o heredadas dentro del sistema familiar.</p>
           <p>El inconsciente registra cada experiencia emocional significativa. Cuando estas experiencias no se integran o resuelven, pueden manifestarse posteriormente a través de síntomas, bloqueos o situaciones repetitivas.</p>
@@ -19,30 +19,30 @@ export default function FAQ() {
       q: "¿qué puedes trabajar?",
       a: (
         <div className="space-y-4">
-          <p className="font-bold text-primary">Aspectos de tu vida que puedes transformar</p>
+          <p className="font-bold text-gray-deep">Aspectos de tu vida que puedes transformar</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="p-4 bg-surface-light rounded-xl">
-              <p className="font-bold text-sm mb-1">Salud y síntomas físicos</p>
+              <p className="font-bold text-sm mb-1 text-gray-deep">Salud y síntomas físicos</p>
               <p className="text-xs">El cuerpo puede expresar conflictos emocionales no resueltos a través de síntomas. Comprender su origen puede abrir la puerta a procesos de transformación profunda.</p>
             </div>
             <div className="p-4 bg-surface-light rounded-xl">
-              <p className="font-bold text-sm mb-1">Emociones intensas</p>
+              <p className="font-bold text-sm mb-1 text-gray-deep">Emociones intensas</p>
               <p className="text-xs">Ansiedad, miedo, tristeza, enojo o culpa pueden tener raíces emocionales más profundas que pueden ser exploradas y comprendidas.</p>
             </div>
             <div className="p-4 bg-surface-light rounded-xl">
-              <p className="font-bold text-sm mb-1">Relaciones</p>
+              <p className="font-bold text-sm mb-1 text-gray-deep">Relaciones</p>
               <p className="text-xs">Patrones repetitivos en pareja, conflictos familiares o dificultad para establecer vínculos sanos.</p>
             </div>
             <div className="p-4 bg-surface-light rounded-xl">
-              <p className="font-bold text-sm mb-1">Prosperidad y dinero</p>
+              <p className="font-bold text-sm mb-1 text-gray-deep">Prosperidad y dinero</p>
               <p className="text-xs">Creencias inconscientes relacionadas con la escasez, el éxito o el merecimiento pueden influir en la forma en que experimentamos la abundancia.</p>
             </div>
             <div className="p-4 bg-surface-light rounded-xl">
-              <p className="font-bold text-sm mb-1">Autoestima</p>
+              <p className="font-bold text-sm mb-1 text-gray-deep">Autoestima</p>
               <p className="text-xs">Programas relacionados con el valor personal, la confianza y la seguridad interior.</p>
             </div>
             <div className="p-4 bg-surface-light rounded-xl">
-              <p className="font-bold text-sm mb-1">Historia familiar</p>
+              <p className="font-bold text-sm mb-1 text-gray-deep">Historia familiar</p>
               <p className="text-xs">Programas heredados del sistema familiar que pueden influir en decisiones, emociones y experiencias actuales.</p>
             </div>
           </div>
@@ -53,7 +53,7 @@ export default function FAQ() {
       q: "¿cómo funciona una sesión?",
       a: (
         <div className="space-y-4">
-          <p className="font-bold text-primary">Un proceso de exploración profunda y consciente</p>
+          <p className="font-bold text-gray-deep">Un proceso de exploración profunda y consciente</p>
           <p>Cada sesión de biodesprogramación es un espacio seguro de acompañamiento donde la persona puede explorar el origen profundo de un conflicto o situación que desea comprender o transformar.</p>
           <div className="space-y-3">
             {[
@@ -66,7 +66,7 @@ export default function FAQ() {
               <div key={idx} className="flex gap-3">
                 <div className="size-1.5 rounded-full bg-primary mt-2 shrink-0"></div>
                 <div>
-                  <p className="font-bold text-sm">{step.t}</p>
+                  <p className="font-bold text-sm text-gray-deep">{step.t}</p>
                   <p className="text-xs">{step.d}</p>
                 </div>
               </div>
@@ -79,7 +79,7 @@ export default function FAQ() {
       q: "¿cómo funciona una sesión de seguimiento?",
       a: (
         <div className="space-y-4">
-          <p className="font-bold text-primary">Proceso de una sesión de seguimiento</p>
+          <p className="font-bold text-gray-deep">Proceso de una sesión de seguimiento</p>
           <div className="space-y-3">
             {[
               { t: "1. Retomar Motivo de consulta", d: "Se redefine claramente el síntoma, emoción o situación que se desea trabajar." },
@@ -91,7 +91,7 @@ export default function FAQ() {
               <div key={idx} className="flex gap-3">
                 <div className="size-1.5 rounded-full bg-primary mt-2 shrink-0"></div>
                 <div>
-                  <p className="font-bold text-sm">{step.t}</p>
+                  <p className="font-bold text-sm text-gray-deep">{step.t}</p>
                   <p className="text-xs">{step.d}</p>
                 </div>
               </div>
@@ -116,7 +116,7 @@ export default function FAQ() {
               key={i} 
               className="group bg-white rounded-lg border border-primary/10 open:border-primary/30 transition-all duration-300"
             >
-              <summary className="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-black group-open:bg-primary group-open:text-white transition-all duration-300 rounded-t-lg group-open:mb-4 font-sans">
+              <summary className="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-gray-deep group-open:bg-primary group-open:text-white transition-all duration-300 rounded-t-lg group-open:mb-4 font-sans">
                 <span>{faq.q}</span>
                 <span className="transition-transform group-open:rotate-180 text-primary group-open:text-white">
                   <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor">
