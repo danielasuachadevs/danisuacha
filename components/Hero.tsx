@@ -12,7 +12,7 @@ export default function Hero() {
             <div className="absolute -top-10 -left-10 w-64 h-64 md:w-[400px] md:h-[400px] z-0 opacity-20 pointer-events-none">
               <Image 
                 src="/multimedia/isotipo.png"
-                alt="Isotipo Daniela Suacha - Biodeprogramación"
+                alt="Isotipo Daniela Suacha - Biodesprogramación"
                 fill
                 sizes="(max-width: 768px) 256px, 400px"
                 className="object-contain object-left-top opacity-100"
@@ -57,13 +57,12 @@ export default function Hero() {
           <div className="flex-1 w-full max-w-lg lg:max-w-none animate-fade-in-up" style={{ animationDelay: '300ms', animationFillMode: 'forwards' }}>
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
               <Image 
-                src="/multimedia/hero_hombre_mujer.png"
+                src="/multimedia/hero_freedom_green.png"
                 alt="Paz y bienestar emocional"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover
-                 object-center transform hover:scale-105 transition-transform duration-700 ease-in-out"
+                className="object-cover object-[46%_center] transform hover:scale-105 transition-transform duration-700 ease-in-out"
               />
               {/* Overlay: Upper Left Text */}
               <div className="absolute top-6 left-6 lg:top-8 lg:left-8 animate-fade-in" style={{ animationDelay: '600ms', animationFillMode: 'forwards' }}>

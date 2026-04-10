@@ -55,7 +55,7 @@ export default function Methodology() {
 
             <div className="relative z-10">
               <span className="text-primary font-bold tracking-widest text-xs uppercase mb-2 block">Metodología</span>
-              <h2 className="font-serif text-3xl md:text-4xl text-gray-deep mb-6">¿Qué es la Biodeprogramación?</h2>
+              <h2 className="font-serif text-3xl md:text-4xl text-gray-deep mb-6">¿Qué es la Biodesprogramación?</h2>
               <p className="text-black mb-8 leading-relaxed font-sans">
                 La biodesprogramación es un proceso de acompañamiento terapéutico que permite identificar y liberar los programas emocionales inconscientes que pueden influir en nuestra salud, nuestras relaciones y nuestras experiencias de vida. Libera tu mente, sana tu historia, transforma tu vida.
               </p>
@@ -93,7 +93,7 @@ export default function Methodology() {
           <div className="absolute inset-0 z-0 opacity-100 pointer-events-none flex items-center justify-center">
             <Image 
               src="/multimedia/isotipo.png"
-              alt="Isotipo Daniela Suacha - Metodología de Biodeprogramación"
+              alt="Isotipo Daniela Suacha - Metodología de Biodesprogramación"
               width={600}
               height={600}
               sizes="(max-width: 768px) 300px, 600px"

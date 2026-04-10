@@ -56,7 +56,7 @@ export default function Pricing() {
             <div>
               <h3 className="font-serif text-2xl text-gray-deep mb-4">Tengo dudas o preguntas</h3>
               <p className="text-gray-deep mb-8 font-sans font-light">
-                ¿No estás seguro si esto es para ti? Escríbeme y evaluemos juntos si la biodeprogramación puede ayudarte.
+                ¿No estás seguro si esto es para ti? Escríbeme y evaluemos juntos si la Biodesprogramación puede ayudarte.
               </p>
             </div>
             <div className="w-full space-y-4">

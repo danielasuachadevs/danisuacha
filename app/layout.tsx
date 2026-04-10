@@ -25,9 +25,9 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://danisuacha.com"),
-  title: "Biodeprogramación Terapéutica | Daniela Suacha",
-  description: "Descubre el origen emocional de tus síntomas físicos y bloqueos emocionales a través de la Biodeprogramación Terapéutica con Daniela Suacha. Transforma tu vida hoy.",
-  keywords: ["biodeprogramación", "terapia emocional", "sanación emocional", "biodescodificación", "clínica terapéutica", "bienestar emocional", "Daniela Suacha"],
+  title: "Biodesprogramación Terapéutica | Daniela Suacha",
+  description: "Descubre el origen emocional de tus síntomas físicos y bloqueos emocionales a través de la Biodesprogramación Terapéutica con Daniela Suacha. Transforma tu vida hoy.",
+  keywords: ["Biodesprogramación", "terapia emocional", "sanación emocional", "biodescodificación", "clínica terapéutica", "bienestar emocional", "Daniela Suacha"],
   authors: [{ name: "Daniela Suacha" }],
   creator: "BlackCherry",
   publisher: "Daniela Suacha",
@@ -40,16 +40,16 @@ export const metadata: Metadata = {
     canonical: "https://danisuacha.com",
   },
   openGraph: {
-    title: "Biodeprogramación Terapéutica - Daniela Suacha",
-    description: "Transforma tu bienestar emocional encontrando el origen de tus conflictos. Sesiones personalizadas de Biodeprogramación.",
+    title: "Biodesprogramación Terapéutica - Daniela Suacha",
+    description: "Transforma tu bienestar emocional encontrando el origen de tus conflictos. Sesiones personalizadas de Biodesprogramación.",
     url: "https://danisuacha.com",
-    siteName: "Biodeprogramación Terapéutica",
+    siteName: "Biodesprogramación Terapéutica",
     images: [
       {
         url: "/multimedia/portada_dani.png",
         width: 1200,
         height: 630,
-        alt: "Biodeprogramación Terapéutica - Daniela Suacha",
+        alt: "Biodesprogramación Terapéutica - Daniela Suacha",
       },
     ],
     locale: "es_MX",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Biodeprogramación Terapéutica - Daniela Suacha",
+    title: "Biodesprogramación Terapéutica - Daniela Suacha",
     description: "Libera tus bloqueos emocionales y sana desde la raíz.",
     images: ["/multimedia/portada_dani.png"],
   },
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "MedicalBusiness",
-  "name": "Biodeprogramación Terapéutica | Daniela Suacha",
+  "name": "Biodesprogramación Terapéutica | Daniela Suacha",
   "image": "https://danisuacha.com/multimedia/logo.png",
   "@id": "https://danisuacha.com",
   "url": "https://danisuacha.com",
