@@ -86,7 +86,7 @@ export default function Calendly() {
                     className="object-cover"
                   />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-deep font-serif mb-2">Sesión de Biodeprogramación</h3>
+                <h3 className="text-2xl font-bold text-gray-deep font-serif mb-2">Sesión de Biodesprogramación</h3>
                 <p className="text-sm text-black/60 font-sans leading-relaxed">
                   Las sesiones son un espacio de acompañamiento personalizado donde exploramos el origen emocional de los conflictos que deseas comprender o transformar.
                 </p>

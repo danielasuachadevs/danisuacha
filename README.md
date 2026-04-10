@@ -1,6 +1,6 @@
-# Daniela Suacha - Biodeprogramación Terapéutica
+# Daniela Suacha - Biodesprogramación Terapéutica
 
-Landing page profesional para Daniela Suacha, enfocada en Biodeprogramación Terapéutica y sanación emocional profunda.
+Landing page profesional para Daniela Suacha, enfocada en Biodesprogramación Terapéutica y sanación emocional profunda.
 
 ## 🚀 Características
 
@@ -8,7 +8,7 @@ Landing page profesional para Daniela Suacha, enfocada en Biodeprogramación Ter
 - **Secciones Modulares**:
   - **Hero**: Introducción impactante con CTA directo.
   - **Pain Points**: Identificación de desafíos comunes de los pacientes.
-  - **Metodología**: Explicación de la Biodeprogramación.
+  - **Metodología**: Explicación de la Biodesprogramación.
   - **Proceso**: Pasos claros para la transformación personal.
   - **Pricing**: Opciones de inversión en bienestar.
   - **Testimonios**: Historias de éxito y transformación.

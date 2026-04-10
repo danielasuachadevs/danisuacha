@@ -93,7 +93,7 @@ export default function Footer() {
         </div>
 
         <div className="text-xs text-white/50 space-y-2 font-sans">
-          <p>© 2026 Biodeprogramación Terapéutica. Todos los derechos reservados.</p>
+          <p>© 2026 Biodesprogramación Terapéutica. Todos los derechos reservados.</p>
           <div className="flex justify-center gap-4">
             <button 
               onClick={() => setIsPrivacyOpen(true)}
@@ -137,7 +137,7 @@ export default function Footer() {
               </section>
               <section>
                 <h3 className="font-bold text-gray-deep mb-2">3. Confidencialidad</h3>
-                <p>Toda la información compartida durante las sesiones de Biodeprogramación es estrictamente confidencial, siguiendo los más altos estándares éticos de la práctica terapéutica.</p>
+                <p>Toda la información compartida durante las sesiones de Biodesprogramación es estrictamente confidencial, siguiendo los más altos estándares éticos de la práctica terapéutica.</p>
               </section>
               <section>
                 <h3 className="font-bold text-gray-deep mb-2">4. Seguridad</h3>

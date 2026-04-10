@@ -102,7 +102,7 @@ export default function FAQ() {
     },
     {
       q: "¿tengo que dejar mi tratamiento médico?",
-      a: "Absolutamente NO. La biodeprogramación es complementaria a la medicina. Nunca debes suspender medicación ni tratamientos sin la autorización de tu médico."
+      a: "Absolutamente NO. La Biodesprogramación es complementaria a la medicina. Nunca debes suspender medicación ni tratamientos sin la autorización de tu médico."
     }
   ];
 
