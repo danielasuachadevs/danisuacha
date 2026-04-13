@@ -4,17 +4,19 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { scrollTo } from '@/lib/scrollTo';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('inicio');
+  const { language, toggleLanguage, t } = useLanguage();
 
   const navLinks = [
-    { name: 'Inicio', href: '#inicio', id: 'inicio' },
-    { name: 'Servicios', href: '#servicios', id: 'servicios' },
-    { name: 'Dani Suachá', href: '#sobre-mi', id: 'sobre-mi' },
-    { name: 'Testimonios', href: '#testimonios', id: 'testimonios' },
-    { name: 'FAQ', href: '#faq', id: 'faq' },
+    { name: t('inicio', 'navbar'), href: '#inicio', id: 'inicio' },
+    { name: t('servicios', 'navbar'), href: '#servicios', id: 'servicios' },
+    { name: t('sobreMi', 'navbar'), href: '#sobre-mi', id: 'sobre-mi' },
+    { name: t('testimonios', 'navbar'), href: '#testimonios', id: 'testimonios' },
+    { name: t('faq', 'navbar'), href: '#faq', id: 'faq' },
   ];
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
@@ -59,7 +61,7 @@ export default function Navbar() {
         <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link 
-              key={link.name} 
+              key={link.id} 
               href={link.href} 
               onClick={(e) => handleLinkClick(e, link.id)}
               className={`relative text-sm font-medium transition-all duration-300 py-1 group hover:scale-105 ${
@@ -75,12 +77,23 @@ export default function Navbar() {
         </nav>
 
         <div className="flex items-center gap-4 lg:ml-8">
+          {/* Language Toggle */}
+          <button
+            onClick={toggleLanguage}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-green-light hover:border-primary hover:bg-primary/5 transition-all text-sm font-bold bg-white shadow-sm"
+            aria-label="Toggle language"
+          >
+            <span className={`transition-opacity duration-300 ${language === 'es' ? 'opacity-100 scale-110' : 'opacity-50'}`}>🇲🇽</span>
+            <span className="w-px h-3 bg-slate-300"></span>
+            <span className={`transition-opacity duration-300 ${language === 'en' ? 'opacity-100 scale-110' : 'opacity-50'}`}>🇺🇸</span>
+          </button>
+
           <Link 
             href="#agendar" 
             onClick={(e) => handleLinkClick(e, 'agendar')}
             className="hidden lg:flex min-h-[2.5rem] h-auto py-2 px-6 items-center justify-center text-center rounded-[12px] bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 hover:scale-[1.05] active:scale-95 transition-all"
           >
-            Agendar Sesión
+            {t('cta', 'navbar')}
           </Link>
           <button 
             className="lg:hidden p-2 text-slate-600 dark:text-slate-300 hover:scale-110 transition-transform"
@@ -109,12 +122,20 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
+          <button
+            onClick={toggleLanguage}
+            className="flex h-12 w-full px-6 items-center justify-center gap-1.5 rounded-full border border-green-light bg-white font-bold text-sm"
+          >
+            <span className={`transition-all duration-300 ${language === 'es' ? 'opacity-100 scale-125' : 'opacity-50'}`}>🇲🇽</span>
+            <span className="w-px h-4 bg-slate-300 mx-2"></span>
+            <span className={`transition-all duration-300 ${language === 'en' ? 'opacity-100 scale-125' : 'opacity-50'}`}>🇺🇸</span>
+          </button>
           <Link 
             href="#agendar" 
             onClick={(e) => handleLinkClick(e, 'agendar')}
             className="flex h-12 px-6 items-center justify-center rounded-full bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20"
           >
-            Agendar Sesión
+            {t('cta', 'navbar')}
           </Link>
         </div>
       )}

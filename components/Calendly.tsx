@@ -3,18 +3,23 @@
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { useState, useEffect, useRef } from "react";
+import { useLanguage } from '@/context/LanguageContext';
 
 // Carga dinámica de InlineWidget para reducir el bundle inicial
 const InlineWidget = dynamic(() => import("react-calendly").then((mod) => mod.InlineWidget), {
   ssr: false,
-  loading: () => (
-    <div className="flex items-center justify-center w-full h-[700px] bg-slate-50/50 rounded-2xl animate-pulse">
-      <p className="text-primary font-medium">Cargando calendario...</p>
-    </div>
-  ),
+  loading: () => {
+    const { t } = useLanguage();
+    return (
+      <div className="flex items-center justify-center w-full h-[700px] bg-slate-50/50 rounded-2xl animate-pulse">
+        <p className="text-primary font-medium">{t('loading', 'calendly')}</p>
+      </div>
+    );
+  },
 });
 
 export default function Calendly() {
+  const { t, language } = useLanguage();
   const [shouldLoad, setShouldLoad] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
   
@@ -40,42 +45,42 @@ export default function Calendly() {
   }, []);
 
   return (
-    <section className="py-20 px-6 lg:px-20 bg-surface-light overflow-hidden scroll-mt-32" ref={sectionRef}>
+    <section className="py-20 px-4 lg:px-20 bg-surface-light overflow-hidden scroll-mt-32" ref={sectionRef}>
       <div className="mx-auto max-w-6xl">
         <div className="text-center mb-16 animate-fade-in-up" style={{ animationFillMode: 'forwards' }}>
-          <span className="text-primary font-bold tracking-widest text-xs uppercase mb-2 block">Reserva</span>
-          <h2 className="font-serif text-3xl md:text-5xl text-gray-deep mb-8">Agenda tu espacio de transformación</h2>
+          <span className="text-primary font-bold tracking-widest text-xs uppercase mb-2 block">{t('badge', 'calendly')}</span>
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-5xl text-gray-deep mb-8 break-words">{t('title', 'calendly')}</h2>
           
-          <div className="max-w-4xl mx-auto bg-white/50 p-8 rounded-3xl border border-primary/10 shadow-sm mb-10 hover-lift">
-            <h3 className="text-2xl font-serif text-gray-deep mb-4">Sesiones de Biodesprogramación</h3>
+          <div className="max-w-4xl mx-auto bg-white/50 p-5 sm:p-8 rounded-3xl border border-primary/10 shadow-sm mb-10 hover-lift">
+            <h3 className="text-xl sm:text-2xl font-serif text-gray-deep mb-4 break-words">{t('sessionTitle', 'calendly')}</h3>
             <p className="text-lg text-gray-deep font-serif italic mb-8">
-              Un espacio seguro y profesional donde podrás:
+              {t('subtitle', 'calendly')}
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="flex flex-col gap-2">
                 <div className="h-1 w-12 bg-green-sage/40 mx-auto rounded-full mb-2"></div>
-                <p className="text-black/70 font-sans text-sm leading-relaxed">Comprender el origen emocional de lo que estás viviendo</p>
+                <p className="text-black/70 font-sans text-sm leading-relaxed">{t('item1', 'calendly')}</p>
               </div>
               <div className="flex flex-col gap-2">
                 <div className="h-1 w-12 bg-green-sage/40 mx-auto rounded-full mb-2"></div>
-                <p className="text-black/70 font-sans text-sm leading-relaxed">Liberar programas inconscientes limitantes</p>
+                <p className="text-black/70 font-sans text-sm leading-relaxed">{t('item2', 'calendly')}</p>
               </div>
               <div className="flex flex-col gap-2">
                 <div className="h-1 w-12 bg-green-sage/40 mx-auto rounded-full mb-2"></div>
-                <p className="text-black/70 font-sans text-sm leading-relaxed">Reconectar con tu bienestar y tu potencial</p>
+                <p className="text-black/70 font-sans text-sm leading-relaxed">{t('item3', 'calendly')}</p>
               </div>
             </div>
           </div>
 
           <p className="text-black/60 font-sans max-w-2xl mx-auto">
-            Selecciona el horario que mejor te funcione. Recibirás un correo de confirmación con los detalles del acceso a Zoom.
+            {t('p1', 'calendly')}
           </p>
         </div>
         
         <div className="bg-white rounded-2xl shadow-xl shadow-primary/5 border border-primary/10 overflow-hidden animate-fade-in-up" style={{ animationDelay: '300ms', animationFillMode: 'forwards' }} id="agendar">
           <div className="flex flex-col lg:flex-row min-h-[700px]">
             {/* Left Info Panel */}
-            <div className="w-full lg:w-80 p-8 lg:p-10 bg-slate-50/50 border-b lg:border-b-0 lg:border-r border-primary/10">
+            <div className="w-full lg:w-80 p-6 sm:p-8 lg:p-10 bg-slate-50/50 border-b lg:border-b-0 lg:border-r border-primary/10">
               <div className="mb-8">
                 <div className="relative w-16 h-16 rounded-full mb-6 border-2 border-white shadow-sm overflow-hidden">
                   <Image 
@@ -86,9 +91,9 @@ export default function Calendly() {
                     className="object-cover"
                   />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-deep font-serif mb-2">Sesión de Biodesprogramación</h3>
+                <h3 className="text-2xl font-bold text-gray-deep font-serif mb-2">{t('sessionTitle', 'calendly')}</h3>
                 <p className="text-sm text-black/60 font-sans leading-relaxed">
-                  Las sesiones son un espacio de acompañamiento personalizado donde exploramos el origen emocional de los conflictos que deseas comprender o transformar.
+                  {t('sidebarDesc', 'calendly')}
                 </p>
               </div>
 
@@ -100,8 +105,8 @@ export default function Calendly() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-xs font-bold text-black/40 uppercase tracking-tighter">Modalidad</p>
-                    <p className="font-bold font-sans">Individual (Online o Presencial)</p>
+                    <p className="text-xs font-bold text-black/40 uppercase tracking-tighter">{t('modalidad.t', 'calendly')}</p>
+                    <p className="font-bold font-sans">{t('modalidad.d', 'calendly')}</p>
                   </div>
                 </div>
 
@@ -112,8 +117,8 @@ export default function Calendly() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-xs font-bold text-black/40 uppercase tracking-tighter">Duración</p>
-                    <p className="font-bold font-sans">45 - 60 minutos</p>
+                    <p className="text-xs font-bold text-black/40 uppercase tracking-tighter">{t('duracion.t', 'calendly')}</p>
+                    <p className="font-bold font-sans">{t('duracion.d', 'calendly')}</p>
                   </div>
                 </div>
               </div>
@@ -135,6 +140,9 @@ export default function Calendly() {
                     primaryColor: '#5F7D76',
                     textColor: '#4F5554',
                   }}
+                  utm={{
+                    utmContent: language
+                  }}
                 />
               )}
             </div>
@@ -143,8 +151,8 @@ export default function Calendly() {
         
         <div className="mt-12 text-center space-y-6">
           <div className="space-y-1">
-            <p className="font-serif text-xl text-primary italic">"Cada proceso es único."</p>
-            <p className="font-serif text-xl text-primary italic">"Cada historia merece ser comprendida."</p>
+            <p className="font-serif text-xl text-primary italic">{t('quote1', 'calendly')}</p>
+            <p className="font-serif text-xl text-primary italic">{t('quote2', 'calendly')}</p>
           </div>
         </div>
       </div>

@@ -1,8 +1,10 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function FloatingActions() {
+  const { t } = useLanguage();
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
@@ -22,17 +24,17 @@ export default function FloatingActions() {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
+      // behavior: 'auto'
     });
   };
 
   return (
     <div className="fixed bottom-6 right-6 z-[100] flex flex-col gap-4 items-end">
-      {/* Scroll to Top Button */}
       {showScrollTop && (
         <button
           onClick={scrollToTop}
           className="group flex size-12 items-center justify-center rounded-full bg-[#E65F4A] hover:bg-[#D44E3B] text-white shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 animate-in fade-in zoom-in slide-in-from-bottom-4 border-2 border-white/20"
-          aria-label="Volver arriba"
+          aria-label={t('floating.scrollTop', 'common') || 'Scroll to top'}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -47,13 +49,12 @@ export default function FloatingActions() {
         </button>
       )}
 
-      {/* WhatsApp Button */}
       <a
         href="https://wa.me/524777657492"
         target="_blank"
         rel="noopener noreferrer"
         className="group relative flex size-14 items-center justify-center rounded-full bg-white text-[#25D366] shadow-xl hover:shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 cursor-pointer border-2 border-[#25D366]/10"
-        aria-label="Contactar por WhatsApp"
+        aria-label={t('floating.whatsapp', 'common') || 'Contact on WhatsApp'}
       >
         <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-10 animate-ping group-hover:animate-none"></span>
         <svg
