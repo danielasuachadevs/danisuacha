@@ -112,6 +112,7 @@ const jsonLd = {
   ]
 };
 
+import { LanguageProvider } from "@/context/LanguageContext";
 import FloatingActions from "@/components/FloatingActions";
 
 export default function RootLayout({
@@ -130,8 +131,10 @@ export default function RootLayout({
       <body
         className={`${gothamBold.variable} ${gothamLight.variable} ${montserrat.variable} antialiased`}
       >
-        {children}
-        <FloatingActions />
+        <LanguageProvider>
+          {children}
+          <FloatingActions />
+        </LanguageProvider>
       </body>
     </html>
   );

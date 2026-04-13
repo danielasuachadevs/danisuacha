@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import { useLanguage } from '@/context/LanguageContext';
 
 interface Testimonial {
   text: string;
@@ -11,6 +12,7 @@ interface Testimonial {
 }
 
 export default function Testimonials() {
+  const { t } = useLanguage();
   const [selectedTestimonial, setSelectedTestimonial] = useState<Testimonial | null>(null);
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
@@ -25,62 +27,29 @@ export default function Testimonials() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const testimonials: Testimonial[] = [
-    {
-      text: "La sesión con Dani me ayudó a identificar y liberar una culpa profunda que venía de creencias arraigadas desde mi historia personal y familiar. Me dio una claridad que nunca había tenido.",
-      author: "Olga Celaya",
-      location: "Paciente",
-      img: "/multimedia/olga.jpeg"
-    },
-    {
-      text: "Hola! Mi nombre es Ruth Torres. Estuve tomando sesiones de bio desprogramación con Daniela, lo cual me ayudó mucho a sacar de raíz eventos traumáticos también a entender qué mensaje me daban mis síntomas, pero lo más importante a tener una mejor salud emocional porque se hace uno consciente de conflictos, problemas, ansiedades, miedos que hacen que nuestra salud no esté al 100. Creo que todos deberíamos de tomar sesiones de biodesprogramación para estar emocionalmente físicamente más sanos.",
-      author: "Ruth Torres",
-      location: "Paciente",
-      img: "/multimedia/ruth.jpeg"
-    },
-    {
-      text: "Mi experiencia con la biodesprogramación ha sido profundamente reveladora. Llegué buscando acompañar un tema de salud relacionado con tiroides de Hashimoto y encontré un espacio para comprender la conexión entre mis emociones, mis pensamientos y mi cuerpo. Ha sido una herramienta valiosa como complemento a mi tratamiento médico, ayudándome a gestionar puntos de vida del pasado que han estado inconscientes durante mucho tiempo y que, al hacerlos conscientes, puedo atenderlos y generar un impacto positivo en mi cuerpo. Gracias Dani Suacha.",
-      author: "Annel Ramos",
-      location: "Paciente",
-      img: "/multimedia/annel.jpeg"
-    },
-    {
-      text: "¿Cómo ha sido tu experiencia con la biodesprogramacion? Es una forma que no podría explicar con exactitud, porque te abre mucho la mente te hace pensar más allá y revivir momentos que pude haber olvidado en algún punto de mi vida. Si me preguntan que si lo recomendaría diría que sí pero sobretodo para aquellas personas que no se cierran a ningún tipo de terapia para sanar, y gente que realmente buscan salir adelante. Yo busque ayuda para salvarme a mí porque me enfocqué mucho tiempo en salvar a más gente y yo me estaba haciendo a un lado cuando ahora sé que mi prioridad soy YO antes que cualquier persona, el haber encontrado ayuda en Dani fue de mucha ayuda he ido de la mano con ella a vivir y experimentar muchas cosas de las que no me creía capaz. \n\n ¿Cómo te ha hecho sentir? Si pudiera resumirlo en una sola palabras diría que en PAZ, sé que todo lo que pasa a mi alrededor tiene y tuvo un porqué, que hubieron cosas que me dolieron en su momento si obviamente como todo, pero apartir de la biodesprogramacion encontré mi tranquilidad y mi paz y seguiré luchando para que siga siendo así. Y meditar es una de las herramientas más poderosa que uno como ser puede experimentar y vivir para encontrar esa paz y tranquilidad.",
-      author: "Jenny Lango",
-      location: "Paciente",
-      img: "/multimedia/jenny.jpeg"
-    },
-    {
-      text: "Estuve viviendo situaciones con mi familia de origen que ya no podía cambiar aún después de haberlo intentado propositivamente, se trataba entonces de lidiar con el reto de cambiar yo. El modo y el método de Dani Suachá me ayudó a identificar claramente algunos patrones ancestrales que yo estaba repitiendo relacionados con la situación que yo quería aprender a manejar. He cambiado entonces el enfoque de tales situaciones, mi esfuerzo y mi voluntad puestos al beneficio de mi cambio personal...",
-      author: "Pancho Alvarado",
-      location: "Paciente",
-      img: ""
-    },
-    {
-      text: "La Biodesprogramación me ha ayudado a transformarme a nivel emocional y personal, así como encontrar el origen de algunas situaciones de mi vida que hoy me permiten observar y analizar mis pensamientos, creencias y patrones, desde una perspectiva mas consciente, lo que sin duda me ayudó a reconocer mis bloqueos y muchas de mis reacciones. Uno de los aspectos más valiosos ha sido comprender la conexión entre mis emociones y mi cuerpo, reconociendo cómo las vivencias y experiencias del pasado influyen en mi presente. Este proceso no solo me ha ayudado a liberar cargas emocionales, sino también a desarrollar una mayor empatía hacia mí misma. La biodesprogramación me ha brindado herramientas para tomar mejores decisiones y asumir la responsabilidad de mi propio proceso de cambio. Aunque no siempre ha sido fácil, cada paso ha representado una oportunidad de crecimiento y de aprendizaje. \n\n En general, puedo decir que este trabajo con la biodesprogramación me ha ayudado a eliminar \"enfermedades crónicas\" y mejorar mi salud notablemente, así como la forma, calidad y la percepción de mi vida.",
-      author: "Ely Ortiz",
-      location: "Paciente",
-      img: "/multimedia/ely.jpeg"
-    },
-    {
-      text: "Mi nombre es Oscar López y quiero dar mi testimonio sobre mis terapias de Biodesprogramación que he tomado con Dani Suacha. Yo llegué muy mal en la primera terapia y al paso de las semanas (3 o 4) ya me sentía mucho mejor, he ido superando poco a poco esas cosas que me tenían tan enfermo física y mentalmente. Han pasado 3 meses, y por las razones que llegué ya las superé!! Pero vamos por más! Gracias Dany!!",
-      author: "Oscar López",
-      location: "Paciente",
-      img: "/multimedia/oscar.jpeg"
-    },
-    {
-      text: "He tomado terapia de biodescodificación biológica aproximadamente 2 años, gracias a ella he logrado superar ansiedad y miedos, he podido identificar problemas desde su raíz, entendiendo que muchas de esas emociones no me corresponden a mí solamente, sino son sentimientos heredados de generaciones anteriores. He visto mejorar mi vida y mis relaciones, he podido ver los eventos pasados desde el amor primeramente hacía mí, y después hacía los demás. Me ha ayudado a abrir mi mente a nuevas perspectivas o tipos de vida, que antes eran inimaginables para mí y hoy son una realidad.",
-      author: "Ana Paulina Manrique",
-      location: "Paciente",
-      img: "/multimedia/ana.jpeg"
-    },
-  ];
+  const dataFromContext = t('data', 'testimonials') as any[];
+  
+  // Mapping images which are not in the dictionary to keep it clean
+  const testimonialImages: Record<string, string> = {
+    "Olga Celaya": "/multimedia/olga.jpeg",
+    "Ruth Torres": "/multimedia/ruth.jpeg",
+    "Annel Ramos": "/multimedia/annel.jpeg",
+    "Jenny Lango": "/multimedia/jenny.jpeg",
+    "Pancho Alvarado": "",
+    "Ely Ortiz": "/multimedia/ely.jpeg",
+    "Oscar López": "/multimedia/oscar.jpeg",
+    "Ana Paulina Manrique": "/multimedia/ana.jpeg"
+  };
+
+  const testimonials: Testimonial[] = dataFromContext.map(item => ({
+    ...item,
+    img: testimonialImages[item.author] || ""
+  }));
 
   const getInitials = (name: string) => {
     return name.split(' ').map(n => n[0]).join('').toUpperCase();
   };
 
-  // Infinite Carousel logic
   const extendedTestimonials = [...testimonials, ...testimonials, ...testimonials];
   const [currentIndex, setCurrentIndex] = useState(testimonials.length);
   const [isTransitioning, setIsTransitioning] = useState(true);
@@ -115,7 +84,6 @@ export default function Testimonials() {
     }
   };
 
-  // Prevent scrolling when modal is open
   useEffect(() => {
     if (selectedTestimonial) {
       document.body.style.overflow = 'hidden';
@@ -128,23 +96,22 @@ export default function Testimonials() {
   }, [selectedTestimonial]);
 
   return (
-    <section className="py-20 px-6 lg:px-20 bg-surface-light overflow-hidden scroll-mt-32" id="testimonios">
+    <section className="py-20 px-4 lg:px-20 bg-surface-light overflow-hidden scroll-mt-32" id="testimonios">
       <div className="mx-auto max-w-7xl">
-        <h2 className="text-center font-serif text-3xl text-gray-deep mb-12">Historias de transformación</h2>
+        <h2 className="text-center font-serif text-2xl sm:text-3xl text-gray-deep mb-12 break-words">{t('title', 'testimonials')}</h2>
         
-        <div className="relative group px-8 md:px-16">
-          {/* Carousel Viewport */}
+        <div className="relative group px-12 sm:px-16">
           <div className="overflow-hidden">
             <div 
               className={`flex transition-transform ${isTransitioning ? 'duration-500 ease-out' : 'duration-0'}`}
               style={{ transform: `translateX(-${currentIndex * (100 / visibleItems)}%)` }}
             >
-              {extendedTestimonials.map((t, i) => (
+              {extendedTestimonials.map((t_item, i) => (
                 <div 
                   key={i} 
                   className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-3"
                 >
-                  <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-100 relative group/card hover:shadow-md transition-shadow flex flex-col min-h-[380px] h-full">
+                  <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-slate-100 relative group/card hover:shadow-md transition-shadow flex flex-col min-h-[380px] h-full">
                     <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48" fill="currentColor" className="text-primary/10 absolute top-4 right-4 group-hover/card:text-primary/20 transition-colors">
                       <path d="M220-320q25 0 42.5-17.5T280-380q0-25-17.5-42.5T220-440q-11 0-21 4t-19 12q14-35 46.5-55.5T300-500v-80q-63 0-106.5 43.5T150-430q0 46 32 78t78 32Zm400 0q25 0 42.5-17.5T680-380q0-25-17.5-42.5T620-440q-11 0-21 4t-19 12q14-35 46.5-55.5T700-500v-80q-63 0-106.5 43.5T550-430q0 46 32 78t78 32Z"/>
                     </svg>
@@ -155,36 +122,35 @@ export default function Testimonials() {
                         </svg>
                       ))}
                     </div>
-                    {/* Strict 5-line limit with line-clamp and fixed min-height to ensure space for button */}
                     <div className="overflow-hidden mb-4 min-h-[150px]">
                       <p className="text-black italic leading-relaxed font-sans line-clamp-5 text-sm md:text-base" style={{ display: '-webkit-box', WebkitBoxOrient: 'vertical', WebkitLineClamp: 5 }}>
-                        {`"${t.text}"`}
+                        {`"${t_item.text}"`}
                       </p>
                     </div>
                     
                     <button 
-                      onClick={() => setSelectedTestimonial(t)}
+                      onClick={() => setSelectedTestimonial(t_item)}
                       className="text-primary font-bold text-sm mb-8 hover:underline text-left w-fit cursor-pointer decoration-2 underline-offset-4"
                     >
-                      Ver testimonio
+                      {t('viewBtn', 'testimonials')}
                     </button>
 
                     <div className="flex items-center gap-3 mt-auto">
                       <div className="size-10 rounded-full bg-primary/10 flex items-center justify-center overflow-hidden relative border border-primary/20">
-                        {t.img ? (
+                        {t_item.img ? (
                           <Image 
-                            src={t.img}
-                            alt={t.author}
+                            src={t_item.img}
+                            alt={t_item.author}
                             fill
                             className="object-cover"
                           />
                         ) : (
-                          <span className="text-primary font-bold text-xs">{getInitials(t.author)}</span>
+                          <span className="text-primary font-bold text-xs">{getInitials(t_item.author)}</span>
                         )}
                       </div>
                       <div>
-                        <p className="text-sm font-bold text-gray-deep font-sans">{t.author}</p>
-                        <p className="text-xs text-black font-sans">{t.location}</p>
+                        <p className="text-sm font-bold text-gray-deep font-sans">{t_item.author}</p>
+                        <p className="text-xs text-black font-sans">{t_item.location}</p>
                       </div>
                     </div>
                   </div>
@@ -193,7 +159,6 @@ export default function Testimonials() {
             </div>
           </div>
 
-          {/* Navigation Arrows - Adjusted for better visibility */}
           <button 
             onClick={prevSlide}
             className="absolute left-0 md:left-4 top-1/2 -translate-y-1/2 size-10 md:size-12 rounded-full bg-white shadow-lg flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all z-20 border border-slate-100"
@@ -215,7 +180,6 @@ export default function Testimonials() {
         </div>
       </div>
 
-      {/* Modal Overlay */}
       {selectedTestimonial && (
         <div 
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm transition-opacity duration-300"
@@ -225,7 +189,6 @@ export default function Testimonials() {
             className="bg-white w-full max-w-2xl max-h-[90vh] rounded-3xl overflow-hidden shadow-2xl relative flex flex-col md:flex-row animate-in fade-in zoom-in duration-300"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close Button */}
             <button 
               onClick={() => setSelectedTestimonial(null)}
               className="absolute top-4 right-4 z-10 size-10 flex items-center justify-center rounded-full bg-white/80 backdrop-blur-md shadow-sm border border-slate-100 hover:bg-red-500 hover:text-white transition-colors group/close"
@@ -235,7 +198,6 @@ export default function Testimonials() {
               </svg>
             </button>
 
-            {/* Biography Style Layout */}
             <div className="md:w-1/3 bg-primary p-6 md:p-8 flex flex-row md:flex-col items-center justify-center md:items-center gap-4 md:gap-0 text-left md:text-center border-b md:border-b-0 md:border-r border-white/10 shrink-0">
               <div className="size-20 md:size-40 rounded-full bg-white/10 flex items-center justify-center overflow-hidden relative md:mb-6 shadow-xl border-4 border-white/20 shrink-0">
                 {selectedTestimonial.img ? (

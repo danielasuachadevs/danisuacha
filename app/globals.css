@@ -31,6 +31,8 @@
   
   --font-sans: var(--font-gotham-light), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-gotham-bold), ui-serif, Georgia, serif;
+
+  --breakpoint-hero: 1310px;
 }
 
 body {
