@@ -302,7 +302,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
           { title: "3. Balance", desc: "We integrate new resources so your body and mind recover their natural state of health." }
         ],
         infoTitle: "A process of awareness and transformation",
-        infoP1: "Bio-deprogramming does not replace medical or psychological treatments. It is a complementary accompaniment that seeks to expand awareness of the emotional conflicts that may be influencing person's life.",
+        infoP1: "Bio-deprogramming does not replace medical or psychological treatments. It is a complementary accompaniment that seeks to expand awareness of the emotional conflicts that may be influencing a person's life.",
         quote: "\"By understanding the root of these programs, many people experience greater clarity, emotional relief, and profound changes in their way of living.\""
       },
       process: {
@@ -373,7 +373,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
             { t: "1. Reason for consultation", d: "The symptom or emotion is clearly defined." },
             { t: "2. Emotional exploration", d: "Significant events and emotions are investigated." },
             { t: "3. Unconscious program identification", d: "Emotional patterns or beliefs are detected." },
-            { t: "4. Awareness making", d: "Understanding the origin allows the unconscious to reorganize info." },
+            { t: "4. Awareness making", d: "Understanding the origin allows the unconscious to reorganize information." },
             { t: "5. Integration", d: "New perceptions and internal resources are generated." }
           ]
         },

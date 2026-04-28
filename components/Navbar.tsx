@@ -83,9 +83,9 @@ export default function Navbar() {
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-green-light hover:border-primary hover:bg-primary/5 transition-all text-sm font-bold bg-white shadow-sm"
             aria-label="Toggle language"
           >
-            <span className={`transition-opacity duration-300 ${language === 'es' ? 'opacity-100 scale-110' : 'opacity-50'}`}>🇲🇽</span>
-            <span className="w-px h-3 bg-slate-300"></span>
-            <span className={`transition-opacity duration-300 ${language === 'en' ? 'opacity-100 scale-110' : 'opacity-50'}`}>🇺🇸</span>
+            <img src="https://flagcdn.com/mx.svg" alt="Español" className={`w-[22px] rounded-sm transition-all duration-300 ${language === 'es' ? 'opacity-100 scale-110 shadow-sm' : 'opacity-50 grayscale hover:grayscale-0'}`} />
+            <span className="w-px h-4 bg-slate-300 mx-1"></span>
+            <img src="https://flagcdn.com/us.svg" alt="English" className={`w-[22px] rounded-sm transition-all duration-300 ${language === 'en' ? 'opacity-100 scale-110 shadow-sm' : 'opacity-50 grayscale hover:grayscale-0'}`} />
           </button>
 
           <Link 
@@ -126,9 +126,9 @@ export default function Navbar() {
             onClick={toggleLanguage}
             className="flex h-12 w-full px-6 items-center justify-center gap-1.5 rounded-full border border-green-light bg-white font-bold text-sm"
           >
-            <span className={`transition-all duration-300 ${language === 'es' ? 'opacity-100 scale-125' : 'opacity-50'}`}>🇲🇽</span>
-            <span className="w-px h-4 bg-slate-300 mx-2"></span>
-            <span className={`transition-all duration-300 ${language === 'en' ? 'opacity-100 scale-125' : 'opacity-50'}`}>🇺🇸</span>
+            <img src="https://flagcdn.com/mx.svg" alt="Español" className={`w-7 rounded-sm transition-all duration-300 ${language === 'es' ? 'opacity-100 scale-110 shadow-sm' : 'opacity-50 grayscale hover:grayscale-0'}`} />
+            <span className="w-px h-5 bg-slate-300 mx-3"></span>
+            <img src="https://flagcdn.com/us.svg" alt="English" className={`w-7 rounded-sm transition-all duration-300 ${language === 'en' ? 'opacity-100 scale-110 shadow-sm' : 'opacity-50 grayscale hover:grayscale-0'}`} />
           </button>
           <Link 
             href="#agendar" 
